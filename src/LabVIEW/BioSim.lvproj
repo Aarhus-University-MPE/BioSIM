@@ -283,7 +283,7 @@
 				<Property Name="INST_defaultDir" Type="Str">{A757BCC0-0770-4266-8173-021F15DE1245}</Property>
 				<Property Name="INST_installerName" Type="Str">install.exe</Property>
 				<Property Name="INST_productName" Type="Str">Temperature Logger</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.2</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.3</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">22308000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
@@ -325,7 +325,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/Full Build</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{E9A58F49-6372-4279-92B8-EEEC810E6979}</Property>
-				<Property Name="Bld_version.build" Type="Int">2</Property>
+				<Property Name="Bld_version.build" Type="Int">4</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Temperature Logger.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/Full Build/Temperature Logger.exe</Property>
