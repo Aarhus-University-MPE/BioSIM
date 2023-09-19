@@ -23,23 +23,14 @@
 			<Item Name="camera_placeholder.png" Type="Document" URL="../resources/camera_placeholder.png"/>
 			<Item Name="TCEM.ini" Type="Document" URL="../TCEM.ini"/>
 		</Item>
-		<Item Name="Functions" Type="Folder">
+		<Item Name="src" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
-			<Item Name="Camera" Type="Folder">
-				<Property Name="NI.SortType" Type="Int">3</Property>
-				<Item Name="Camera_Config.vi" Type="VI" URL="../Camera_Config.vi"/>
-				<Item Name="Camera_Grab.vi" Type="VI" URL="../Camera_Grab.vi"/>
-				<Item Name="Camera_Feed.vi" Type="VI" URL="../Camera_Feed.vi"/>
-				<Item Name="Camera_Rectangle_To_ROI.vi" Type="VI" URL="../Camera_Rectangle_To_ROI.vi"/>
-				<Item Name="Camera_ROI_To_Rectangle.vi" Type="VI" URL="../Camera_ROI_To_Rectangle.vi"/>
-				<Item Name="Camera_ROI_Extract.vi" Type="VI" URL="../Camera_ROI_Extract.vi"/>
-			</Item>
 			<Item Name="Arduino" Type="Folder">
 				<Item Name="Arduino_Initialize.vi" Type="VI" URL="../Arduino_Initialize.vi"/>
 				<Item Name="Arduino_Mode.vi" Type="VI" URL="../Arduino_Mode.vi"/>
 				<Item Name="Arduino_Resend_Heat_Timeout.vi" Type="VI" URL="../Arduino_Resend_Heat_Timeout.vi"/>
 			</Item>
-			<Item Name="Thermal Camera" Type="Folder">
+			<Item Name="Camera" Type="Folder">
 				<Item Name="UI" Type="Folder">
 					<Item Name="TCam_CenterArray.vi" Type="VI" URL="../TCam_CenterArray.vi"/>
 					<Item Name="TCam_HorizontalLines.vi" Type="VI" URL="../TCam_HorizontalLines.vi"/>
@@ -137,13 +128,13 @@
 					<Item Name="Thermistor_Extract.vi" Type="VI" URL="../Thermistor_Extract.vi"/>
 					<Item Name="Read Exe WriteDate.vi" Type="VI" URL="../Read Exe WriteDate.vi"/>
 					<Item Name="VersionCheck.vi" Type="VI" URL="../VersionCheck.vi"/>
+					<Item Name="CPU_Overload.vi" Type="VI" URL="../CPU_Overload.vi"/>
 				</Item>
 				<Item Name="DataCluster.ctl" Type="VI" URL="../DataCluster.ctl"/>
 				<Item Name="TCE_Config.ctl" Type="VI" URL="../TCE_Config.ctl"/>
 				<Item Name="RunTimeMenu.rtm" Type="Document" URL="../RunTimeMenu.rtm"/>
 				<Item Name="RunTimeMenu_Partition.rtm" Type="Document" URL="../RunTimeMenu_Partition.rtm"/>
 				<Item Name="DataAcquisitionState.vi" Type="VI" URL="../DataAcquisitionState.vi"/>
-				<Item Name="CPU_Overload.vi" Type="VI" URL="../CPU_Overload.vi"/>
 				<Item Name="DAQ_Control.vi" Type="VI" URL="../DAQ_Control.vi"/>
 			</Item>
 			<Item Name="UI" Type="Folder">
@@ -238,6 +229,8 @@
 			<Item Name="Logo.ico" Type="Document" URL="../resources/Logo.ico"/>
 			<Item Name="Logo_TCC.ico" Type="Document" URL="../resources/Logo_TCC.ico"/>
 			<Item Name="Logo_TCE.ico" Type="Document" URL="../resources/Logo_TCE.ico"/>
+			<Item Name="LogoBio.ico" Type="Document" URL="../resources/LogoBio.ico"/>
+			<Item Name="LogoClean.ico" Type="Document" URL="../resources/LogoClean.ico"/>
 		</Item>
 		<Item Name="TCE" Type="Folder">
 			<Item Name="Config" Type="Folder">
@@ -578,6 +571,10 @@
 				<Item Name="Trim Whitespace One-Sided.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace One-Sided.vi"/>
 				<Item Name="LVPositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPositionTypeDef.ctl"/>
 				<Item Name="NI_Vision_Development_Module.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/NI_Vision_Development_Module.lvlib"/>
+				<Item Name="DAQmx Read (Power Wfm 1Chan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power Wfm 1Chan 1Samp).vi"/>
+				<Item Name="DAQmx Read (Power Wfm 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power Wfm 1Chan NSamp).vi"/>
+				<Item Name="DAQmx Read (Power 1D Wfm NChan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power 1D Wfm NChan 1Samp).vi"/>
+				<Item Name="DAQmx Read (Power 1D Wfm NChan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power 1D Wfm NChan NSamp).vi"/>
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
@@ -615,6 +612,11 @@
 			<Item Name="Stream-bool.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Stream-bool.lvlib"/>
 			<Item Name="Tag-c(c(ref(LVObjVI()),bool),bool,bool,u32[Cool,Heat]).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(c(ref(LVObjVI()),bool),bool,bool,u32[Cool,Heat]).lvlib"/>
 			<Item Name="Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib"/>
+			<Item Name="Camera_Grab.vi" Type="VI" URL="../Camera_Grab.vi"/>
+			<Item Name="Camera_Feed.vi" Type="VI" URL="../Camera_Feed.vi"/>
+			<Item Name="Camera_Rectangle_To_ROI.vi" Type="VI" URL="../Camera_Rectangle_To_ROI.vi"/>
+			<Item Name="Camera_ROI_To_Rectangle.vi" Type="VI" URL="../Camera_ROI_To_Rectangle.vi"/>
+			<Item Name="Camera_ROI_Extract.vi" Type="VI" URL="../Camera_ROI_Extract.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Thermal Camera Evaluation" Type="EXE">
@@ -716,7 +718,7 @@
 				<Property Name="TgtF_targetfileName" Type="Str">TCC.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
-			<Item Name="BioSIM Controller" Type="EXE">
+			<Item Name="BioSIM" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_includeHWConfig" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{3618DAED-42DC-4E68-88A6-01E191E81E60}</Property>
@@ -726,7 +728,7 @@
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{33F274C5-765A-4CC4-96AB-55991902EFC2}</Property>
 				<Property Name="Bld_buildSpecDescription" Type="Str">BioSIM (Bioaerosol Simulation Chamber) Software</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">BioSIM Controller</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">BioSIM</Property>
 				<Property Name="Bld_excludeDependentDLLs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeDependentPPLs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
@@ -737,8 +739,8 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{27D8B2BC-76A3-474D-8C11-FD95C8E7081D}</Property>
 				<Property Name="Bld_version.build" Type="Int">8</Property>
 				<Property Name="Bld_version.patch" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">Biosim Controller.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/Full Build/Biosim Controller.exe</Property>
+				<Property Name="Destination[0].destName" Type="Str">Biosim.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/Full Build/Biosim.exe</Property>
 				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
@@ -746,8 +748,8 @@
 				<Property Name="Destination[1].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/Full Build/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Assets/Logo.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{134B1364-A281-43F8-9468-0E69F977B6EF}</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Assets/LogoClean.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{1AA5A145-E09C-42DD-8727-3469D5844CEC}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/main.vi</Property>
@@ -777,53 +779,11 @@
 				<Property Name="SourceCount" Type="Int">8</Property>
 				<Property Name="TgtF_companyName" Type="Str">Aarhus University</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Software for controlling BioSIM (Bioaerosol Simulation Chamber)</Property>
-				<Property Name="TgtF_internalName" Type="Str">BioSIM Controller</Property>
+				<Property Name="TgtF_internalName" Type="Str">BioSIM</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021 Aarhus University</Property>
-				<Property Name="TgtF_productName" Type="Str">BioSIM Controller</Property>
+				<Property Name="TgtF_productName" Type="Str">BioSIM</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{58C928C1-8473-4CEF-96B2-F9CFB2EAA16B}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">Biosim Controller.exe</Property>
-				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
-			</Item>
-			<Item Name="ThermoCouple Logger" Type="EXE">
-				<Property Name="App_copyErrors" Type="Bool">true</Property>
-				<Property Name="App_INI_aliasGUID" Type="Str">{70A84075-6C05-422C-B323-5490050B1F69}</Property>
-				<Property Name="App_INI_GUID" Type="Str">{3D4ADAA7-89D1-4BA9-BC91-3627D88D9B9B}</Property>
-				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="App_serverType" Type="Int">0</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
-				<Property Name="Bld_buildCacheID" Type="Str">{B2B92525-4D59-4D90-B76E-66C04CB9E87C}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
-				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
-				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/C/Users/au540322/Documents/Projects/Ice-Nucleation/Builds/ThermoCouple Logger</Property>
-				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
-				<Property Name="Bld_previewCacheID" Type="Str">{04623F28-7333-4F6B-AD50-15842B385094}</Property>
-				<Property Name="Bld_version.build" Type="Int">4</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">ThermoCouple Logger.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">/C/Users/au540322/Documents/Projects/Ice-Nucleation/Builds/ThermoCouple Logger/ThermoCouple Logger.exe</Property>
-				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
-				<Property Name="Destination[0].type" Type="Str">App</Property>
-				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/C/Users/au540322/Documents/Projects/Ice-Nucleation/Builds/ThermoCouple Logger/data</Property>
-				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{E5BBE1F4-5AE3-4141-BFBC-F3948928A204}</Property>
-				<Property Name="Source[0].type" Type="Str">Container</Property>
-				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Test Functions/ThermoCouple_Logger.vi</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
-				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">2</Property>
-				<Property Name="TgtF_companyName" Type="Str">Aarhus University</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="TgtF_internalName" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021 Aarhus University</Property>
-				<Property Name="TgtF_productName" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="TgtF_targetfileGUID" Type="Str">{BE78CD84-E0EC-4E22-A1CA-B925114698D2}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">ThermoCouple Logger.exe</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">Biosim.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Installer" Type="Installer">
@@ -954,7 +914,7 @@
 				<Property Name="Source[0].File[0].tag" Type="Str">{58C928C1-8473-4CEF-96B2-F9CFB2EAA16B}</Property>
 				<Property Name="Source[0].FileCount" Type="Int">1</Property>
 				<Property Name="Source[0].name" Type="Str">BioSIM Controller</Property>
-				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/BioSIM Controller</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/BioSIM</Property>
 				<Property Name="Source[0].type" Type="Str">EXE</Property>
 				<Property Name="Source[1].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[1].name" Type="Str">TCam.ini</Property>
@@ -971,7 +931,7 @@
 				<Property Name="Source[10].File[0].tag" Type="Str">{BE78CD84-E0EC-4E22-A1CA-B925114698D2}</Property>
 				<Property Name="Source[10].FileCount" Type="Int">1</Property>
 				<Property Name="Source[10].name" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="Source[10].tag" Type="Ref">/My Computer/Build Specifications/ThermoCouple Logger</Property>
+				<Property Name="Source[10].tag" Type="Ref"></Property>
 				<Property Name="Source[10].type" Type="Str">EXE</Property>
 				<Property Name="Source[2].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[2].name" Type="Str">settings.ini</Property>
@@ -1037,9 +997,6 @@
 				<Property Name="SourceCount" Type="Int">11</Property>
 			</Item>
 			<Item Name="Updater" Type="Installer">
-				<Property Name="AB_Class_Path" Type="Path">/&lt;vilib&gt;/AppBuilder/IB_Classes/MSI/IB_MSI.lvclass</Property>
-				<Property Name="AB_Temp_Project_Path" Type="Path">/D/Projects/BioSIM/src/LabVIEW/BioSIM/BioSIM.lvproj</Property>
-				<Property Name="AB_UIClass_Path" Type="Path">/&lt;vilib&gt;/AppBuilder/IB_Classes/Installer/UI/AB_UI_Frmwk_Installer.lvclass</Property>
 				<Property Name="Destination[0].name" Type="Str">BioSIM</Property>
 				<Property Name="Destination[0].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
 				<Property Name="Destination[0].tag" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
@@ -1092,7 +1049,7 @@
 				<Property Name="Source[0].File[0].tag" Type="Str">{58C928C1-8473-4CEF-96B2-F9CFB2EAA16B}</Property>
 				<Property Name="Source[0].FileCount" Type="Int">1</Property>
 				<Property Name="Source[0].name" Type="Str">BioSIM Controller</Property>
-				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/BioSIM Controller</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/BioSIM</Property>
 				<Property Name="Source[0].type" Type="Str">EXE</Property>
 				<Property Name="Source[1].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[1].name" Type="Str">TCam.ini</Property>
@@ -1109,7 +1066,7 @@
 				<Property Name="Source[10].File[0].tag" Type="Str">{BE78CD84-E0EC-4E22-A1CA-B925114698D2}</Property>
 				<Property Name="Source[10].FileCount" Type="Int">1</Property>
 				<Property Name="Source[10].name" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="Source[10].tag" Type="Ref">/My Computer/Build Specifications/ThermoCouple Logger</Property>
+				<Property Name="Source[10].tag" Type="Ref"></Property>
 				<Property Name="Source[10].type" Type="Str">EXE</Property>
 				<Property Name="Source[2].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[2].name" Type="Str">settings.ini</Property>
