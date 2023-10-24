@@ -130,9 +130,6 @@
 			<Item Name="System" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="Misc" Type="Folder">
-					<Item Name="SystemActive.vi" Type="VI" URL="../SystemActive.vi"/>
-					<Item Name="Camera_Frequency.vi" Type="VI" URL="../Camera_Frequency.vi"/>
-					<Item Name="SampleRate_Convert.vi" Type="VI" URL="../SampleRate_Convert.vi"/>
 					<Item Name="Image_Folder_Path_Checker.vi" Type="VI" URL="../Image_Folder_Path_Checker.vi"/>
 					<Item Name="Calibration_Converter.vi" Type="VI" URL="../Calibration_Converter.vi"/>
 					<Item Name="Points to Oval.vi" Type="VI" URL="../Points to Oval.vi"/>
@@ -152,6 +149,14 @@
 					<Item Name="Get File Info.vi" Type="VI" URL="../Get File Info.vi"/>
 					<Item Name="Windows SYSTEMTIME to String.vi" Type="VI" URL="../Windows SYSTEMTIME to String.vi"/>
 					<Item Name="DAQ_Control.vi" Type="VI" URL="../DAQ_Control.vi"/>
+				</Item>
+				<Item Name="Converters" Type="Folder">
+					<Item Name="System_Exit.vi" Type="VI" URL="../System_Exit.vi"/>
+					<Item Name="System_Active.vi" Type="VI" URL="../System_Active.vi"/>
+					<Item Name="System_Ready.vi" Type="VI" URL="../System_Ready.vi"/>
+					<Item Name="System_Inactive.vi" Type="VI" URL="../System_Inactive.vi"/>
+					<Item Name="Camera_Frequency.vi" Type="VI" URL="../Camera_Frequency.vi"/>
+					<Item Name="SampleRate_Convert.vi" Type="VI" URL="../SampleRate_Convert.vi"/>
 				</Item>
 				<Item Name="DataCluster.ctl" Type="VI" URL="../DataCluster.ctl"/>
 				<Item Name="TCE_Config.ctl" Type="VI" URL="../TCE_Config.ctl"/>
@@ -593,10 +598,6 @@
 				<Item Name="Trim Whitespace One-Sided.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace One-Sided.vi"/>
 				<Item Name="LVPositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPositionTypeDef.ctl"/>
 				<Item Name="NI_Vision_Development_Module.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/NI_Vision_Development_Module.lvlib"/>
-				<Item Name="DAQmx Read (Power Wfm 1Chan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power Wfm 1Chan 1Samp).vi"/>
-				<Item Name="DAQmx Read (Power Wfm 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power Wfm 1Chan NSamp).vi"/>
-				<Item Name="DAQmx Read (Power 1D Wfm NChan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power 1D Wfm NChan 1Samp).vi"/>
-				<Item Name="DAQmx Read (Power 1D Wfm NChan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power 1D Wfm NChan NSamp).vi"/>
 				<Item Name="DAQmx Write (Counter 1D Time 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Time 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Write (Counter 1D Ticks 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Ticks 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Write (Counter 1D Frequency 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Frequency 1Chan NSamp).vi"/>
