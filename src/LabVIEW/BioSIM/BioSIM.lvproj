@@ -112,7 +112,19 @@
 				<Item Name="PID_Control.vi" Type="VI" URL="../PID_Control.vi"/>
 				<Item Name="AutoPID.vi" Type="VI" URL="../AutoPID.vi"/>
 			</Item>
+			<Item Name="PSU DC" Type="Folder">
+				<Item Name="Converters" Type="Folder">
+					<Item Name="Convert_DC_VoltPct.vi" Type="VI" URL="../Convert_DC_VoltPct.vi"/>
+					<Item Name="Convert_DC_PctVolt.vi" Type="VI" URL="../Convert_DC_PctVolt.vi"/>
+				</Item>
+			</Item>
 			<Item Name="PSU AC" Type="Folder">
+				<Item Name="Converters" Type="Folder">
+					<Item Name="Convert_AC_PctFreq.vi" Type="VI" URL="../Convert_AC_PctFreq.vi"/>
+					<Item Name="Convert_AC_FreqPct.vi" Type="VI" URL="../Convert_AC_FreqPct.vi"/>
+					<Item Name="Convert_AC_PctVolt.vi" Type="VI" URL="../Convert_AC_PctVolt.vi"/>
+					<Item Name="Convert_AC_VoltPct.vi" Type="VI" URL="../Convert_AC_VoltPct.vi"/>
+				</Item>
 				<Item Name="PSU_Command.vi" Type="VI" URL="../PSU_Command.vi"/>
 				<Item Name="PSU_Output.vi" Type="VI" URL="../PSU_Output.vi"/>
 				<Item Name="PSU_State.vi" Type="VI" URL="../PSU_State.vi"/>
@@ -649,6 +661,10 @@
 				<Item Name="DAQmx Write (Analog 1D DBL 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Analog 1D DBL 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Write.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write.vi"/>
 				<Item Name="IMAQ ArrayToImage" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ ArrayToImage"/>
+				<Item Name="DAQmx Read (Power Wfm 1Chan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power Wfm 1Chan 1Samp).vi"/>
+				<Item Name="DAQmx Read (Power Wfm 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power Wfm 1Chan NSamp).vi"/>
+				<Item Name="DAQmx Read (Power 1D Wfm NChan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power 1D Wfm NChan 1Samp).vi"/>
+				<Item Name="DAQmx Read (Power 1D Wfm NChan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power 1D Wfm NChan NSamp).vi"/>
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
