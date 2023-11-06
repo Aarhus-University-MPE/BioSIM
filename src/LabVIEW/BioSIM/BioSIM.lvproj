@@ -12,16 +12,12 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Build files" Type="Folder">
-			<Item Name="Partitions" Type="Folder">
-				<Item Name="Big Setup.prt" Type="Document" URL="../Partitions/Big Setup.prt"/>
-				<Item Name="Small Setup.prt" Type="Document" URL="../Partitions/Small Setup.prt"/>
+			<Item Name="Profiles" Type="Folder">
+				<Item Name="Calibration.ini" Type="Document" URL="../Calibration.ini"/>
 			</Item>
-			<Item Name="TCam.ini" Type="Document" URL="../TCam.ini"/>
-			<Item Name="TCC.ini" Type="Document" URL="../TCC.ini"/>
 			<Item Name="settings.ini" Type="Document" URL="../settings.ini"/>
-			<Item Name="Calibration.ini" Type="Document" URL="../Calibration.ini"/>
 			<Item Name="camera_placeholder.png" Type="Document" URL="../resources/camera_placeholder.png"/>
-			<Item Name="TCEM.ini" Type="Document" URL="../TCEM.ini"/>
+			<Item Name="placeholder.temp" Type="Document" URL="../resources/placeholder.temp"/>
 		</Item>
 		<Item Name="src" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
@@ -699,105 +695,6 @@
 			<Item Name="Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
-			<Item Name="Thermal Camera Evaluation" Type="EXE">
-				<Property Name="App_copyErrors" Type="Bool">true</Property>
-				<Property Name="App_includeHWConfig" Type="Bool">true</Property>
-				<Property Name="App_INI_aliasGUID" Type="Str">{70A65245-F323-49E4-9FAC-5F38AC01EAE3}</Property>
-				<Property Name="App_INI_GUID" Type="Str">{7848AB33-9735-4E85-9F55-B9B72F777C01}</Property>
-				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="App_serverType" Type="Int">0</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
-				<Property Name="Bld_buildCacheID" Type="Str">{17DCC4A0-8985-414C-8CB5-944BE4DFA469}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Thermal Camera Evaluation</Property>
-				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
-				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
-				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/D/Projects/Ice-Nucleation-Controller/Builds/Full Build</Property>
-				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
-				<Property Name="Bld_previewCacheID" Type="Str">{95EEF059-8F91-49DB-A57E-FF38AF6547AD}</Property>
-				<Property Name="Bld_version.build" Type="Int">5</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Bld_version.minor" Type="Int">2</Property>
-				<Property Name="Bld_version.patch" Type="Int">3</Property>
-				<Property Name="Destination[0].destName" Type="Str">TCE.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">/D/Projects/Ice-Nucleation-Controller/Builds/Full Build/TCE.exe</Property>
-				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
-				<Property Name="Destination[0].type" Type="Str">App</Property>
-				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/D/Projects/Ice-Nucleation-Controller/Builds/Full Build/data</Property>
-				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Assets/Logo_TCE.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{46D14CA3-4DCD-4280-8083-27741A09FF72}</Property>
-				<Property Name="Source[0].type" Type="Str">Container</Property>
-				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/TCE.vi</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
-				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Build files/camera_placeholder.png</Property>
-				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Build files/TCEM.ini</Property>
-				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="SourceCount" Type="Int">4</Property>
-				<Property Name="TgtF_companyName" Type="Str">Aarhus University</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Thermal Camera Evaluation</Property>
-				<Property Name="TgtF_internalName" Type="Str">Thermal Camera Evaluation</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2022 Aarhus University</Property>
-				<Property Name="TgtF_productName" Type="Str">Thermal Camera Evaluation</Property>
-				<Property Name="TgtF_targetfileGUID" Type="Str">{765937FA-2BBA-4638-A757-5D4AB3FD30F3}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">TCE.exe</Property>
-				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
-			</Item>
-			<Item Name="Thermal Camera Calibration" Type="EXE">
-				<Property Name="App_copyErrors" Type="Bool">true</Property>
-				<Property Name="App_INI_aliasGUID" Type="Str">{2334B61B-6B3E-4D24-A9C0-96B39E498EB5}</Property>
-				<Property Name="App_INI_GUID" Type="Str">{C85F06F1-1A3D-4FB7-9985-975313B408B5}</Property>
-				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="App_serverType" Type="Int">0</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
-				<Property Name="Bld_buildCacheID" Type="Str">{8DA6213A-A7F3-4600-85FC-E0D98D0D85A9}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Thermal Camera Calibration</Property>
-				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
-				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
-				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/D/Projects/Ice-Nucleation-Controller/Builds/Full Build</Property>
-				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
-				<Property Name="Bld_previewCacheID" Type="Str">{6FD33856-2380-4F94-8CB7-5581C7931DF6}</Property>
-				<Property Name="Bld_version.build" Type="Int">40</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Bld_version.patch" Type="Int">2</Property>
-				<Property Name="Destination[0].destName" Type="Str">TCC.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">/D/Projects/Ice-Nucleation-Controller/Builds/Full Build/TCC.exe</Property>
-				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
-				<Property Name="Destination[0].type" Type="Str">App</Property>
-				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/D/Projects/Ice-Nucleation-Controller/Builds/Full Build/data</Property>
-				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Assets/Logo_TCC.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{46D14CA3-4DCD-4280-8083-27741A09FF72}</Property>
-				<Property Name="Source[0].type" Type="Str">Container</Property>
-				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/TCC.vi</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
-				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Build files/TCC.ini</Property>
-				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="SourceCount" Type="Int">3</Property>
-				<Property Name="TgtF_companyName" Type="Str">Aarhus University</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Thermal Camera Calibration</Property>
-				<Property Name="TgtF_internalName" Type="Str">Thermal Camera Calibration</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2022 Aarhus University</Property>
-				<Property Name="TgtF_productName" Type="Str">Thermal Camera Calibration</Property>
-				<Property Name="TgtF_targetfileGUID" Type="Str">{4ECC90C8-5AFA-4E65-8969-5270033137DC}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">TCC.exe</Property>
-				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
-			</Item>
 			<Item Name="BioSIM" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_includeHWConfig" Type="Bool">true</Property>
@@ -814,49 +711,43 @@
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/Full Build</Property>
+				<Property Name="Bld_localDestDir" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/bin/Full Build</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{27D8B2BC-76A3-474D-8C11-FD95C8E7081D}</Property>
-				<Property Name="Bld_version.build" Type="Int">8</Property>
+				<Property Name="Bld_version.build" Type="Int">11</Property>
 				<Property Name="Bld_version.patch" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Biosim.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/Full Build/Biosim.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/bin/Full Build/Biosim.exe</Property>
 				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/Full Build/data</Property>
+				<Property Name="Destination[1].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/bin/Full Build/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Assets/LogoClean.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{1AA5A145-E09C-42DD-8727-3469D5844CEC}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{141C37E4-DA11-4FB3-93AB-84E534B5520E}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[2].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Build files/Partitions</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Build files/settings.ini</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[2].type" Type="Str">Container</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Build files/TCam.ini</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Build files/Profiles/Calibration.ini</Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Build files/settings.ini</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Build files/camera_placeholder.png</Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Build files/Calibration.ini</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Build files/Profiles</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Build files/camera_placeholder.png</Property>
-				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Build files/TCEM.ini</Property>
-				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="SourceCount" Type="Int">8</Property>
+				<Property Name="Source[5].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">6</Property>
 				<Property Name="TgtF_companyName" Type="Str">Aarhus University</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Software for controlling BioSIM (Bioaerosol Simulation Chamber)</Property>
 				<Property Name="TgtF_internalName" Type="Str">BioSIM</Property>
@@ -871,49 +762,57 @@
 				<Property Name="Destination[0].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
 				<Property Name="Destination[0].tag" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
-				<Property Name="Destination[0].unlock" Type="Bool">true</Property>
-				<Property Name="Destination[1].name" Type="Str">Data</Property>
-				<Property Name="Destination[1].parent" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Destination[1].tag" Type="Str">{91FD325C-AAB7-491E-AB64-7BBBE922D8DB}</Property>
+				<Property Name="Destination[1].name" Type="Str">BioSIM</Property>
+				<Property Name="Destination[1].parent" Type="Str">{7C5E53B9-0CC8-49B4-8873-46C4C66A2706}</Property>
+				<Property Name="Destination[1].tag" Type="Str">{DE0D8947-D019-4DBD-BE0E-9A86F64EA08E}</Property>
 				<Property Name="Destination[1].type" Type="Str">userFolder</Property>
-				<Property Name="Destination[1].unlock" Type="Bool">true</Property>
-				<Property Name="Destination[2].name" Type="Str">Partitions</Property>
-				<Property Name="Destination[2].parent" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Destination[2].tag" Type="Str">{09B5634D-F4F6-46D8-8877-756072EA0D65}</Property>
+				<Property Name="Destination[2].name" Type="Str">Data</Property>
+				<Property Name="Destination[2].parent" Type="Str">{DE0D8947-D019-4DBD-BE0E-9A86F64EA08E}</Property>
+				<Property Name="Destination[2].tag" Type="Str">{BCC3C453-BFDD-449E-9682-94496F07531B}</Property>
 				<Property Name="Destination[2].type" Type="Str">userFolder</Property>
-				<Property Name="Destination[2].unlock" Type="Bool">true</Property>
-				<Property Name="DestinationCount" Type="Int">3</Property>
+				<Property Name="Destination[3].name" Type="Str">AppDataFolder</Property>
+				<Property Name="Destination[3].tag" Type="Str">{B5031A4D-C214-4550-BC56-01AB791D6C82}</Property>
+				<Property Name="Destination[3].type" Type="Str">userFolder</Property>
+				<Property Name="Destination[4].name" Type="Str">BioSIM</Property>
+				<Property Name="Destination[4].parent" Type="Str">{B5031A4D-C214-4550-BC56-01AB791D6C82}</Property>
+				<Property Name="Destination[4].tag" Type="Str">{8ACD62BA-487F-493E-9D92-6FE501107719}</Property>
+				<Property Name="Destination[4].type" Type="Str">userFolder</Property>
+				<Property Name="Destination[5].name" Type="Str">Profiles</Property>
+				<Property Name="Destination[5].parent" Type="Str">{8ACD62BA-487F-493E-9D92-6FE501107719}</Property>
+				<Property Name="Destination[5].tag" Type="Str">{D0C73DC0-4A20-4292-91A7-46092AB50822}</Property>
+				<Property Name="Destination[5].type" Type="Str">userFolder</Property>
+				<Property Name="DestinationCount" Type="Int">6</Property>
 				<Property Name="DistPart[0].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[0].productID" Type="Str">{0C3CAF31-4F7C-4135-A5BD-44701BEC0CBE}</Property>
-				<Property Name="DistPart[0].productName" Type="Str">NI Vision Common Resources 2022 Q3</Property>
+				<Property Name="DistPart[0].productID" Type="Str">{C8E6A834-3F86-4C97-A020-8DE0F5522BF9}</Property>
+				<Property Name="DistPart[0].productName" Type="Str">NI Vision Common Resources 2023 Q1</Property>
 				<Property Name="DistPart[0].upgradeCode" Type="Str">{409BEFA9-EB3E-472F-AD77-271A4A1D5927}</Property>
 				<Property Name="DistPart[1].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[1].productID" Type="Str">{4A099A0F-EEAB-4E52-8721-5515D0162D04}</Property>
-				<Property Name="DistPart[1].productName" Type="Str">NI Vision Runtime 2022 Q3</Property>
+				<Property Name="DistPart[1].productID" Type="Str">{31AB186F-BCAD-4EF6-9192-7D44C7587B99}</Property>
+				<Property Name="DistPart[1].productName" Type="Str">NI Vision Runtime 2023 Q1</Property>
 				<Property Name="DistPart[1].upgradeCode" Type="Str">{63DF74E5-A5C9-11D4-814E-005004D6CDD6}</Property>
 				<Property Name="DistPart[2].flavorID" Type="Str">_full_</Property>
-				<Property Name="DistPart[2].productID" Type="Str">{F19060DD-AA3B-4C3D-8E47-5792E36DFF3A}</Property>
-				<Property Name="DistPart[2].productName" Type="Str">NI-488.2 Runtime 21.5</Property>
+				<Property Name="DistPart[2].productID" Type="Str">{45E21CB8-05D7-4E12-B56D-2DDF6EC5B1CB}</Property>
+				<Property Name="DistPart[2].productName" Type="Str">NI-488.2 Runtime 23.5</Property>
 				<Property Name="DistPart[2].upgradeCode" Type="Str">{357F6618-C660-41A2-A185-5578CC876D1D}</Property>
 				<Property Name="DistPart[3].flavorID" Type="Str">_full_</Property>
-				<Property Name="DistPart[3].productID" Type="Str">{FB6A85DD-B936-4E9B-B820-DE0CDE8C2916}</Property>
-				<Property Name="DistPart[3].productName" Type="Str">NI-DAQmx Runtime 22.5</Property>
+				<Property Name="DistPart[3].productID" Type="Str">{E5B0D967-91AE-4386-A81C-AFD1353A0D14}</Property>
+				<Property Name="DistPart[3].productName" Type="Str">NI-DAQmx Runtime 23.5</Property>
 				<Property Name="DistPart[3].upgradeCode" Type="Str">{923C9CD5-A0D8-4147-9A8D-998780E30763}</Property>
 				<Property Name="DistPart[4].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[4].productID" Type="Str">{DD57CE9F-9633-4315-A200-EFCF37011AFF}</Property>
-				<Property Name="DistPart[4].productName" Type="Str">NI-IMAQdx Runtime 22.5</Property>
+				<Property Name="DistPart[4].productID" Type="Str">{600831DA-D9CA-4B20-A4B3-3293A741324F}</Property>
+				<Property Name="DistPart[4].productName" Type="Str">NI-IMAQdx Runtime 23.0</Property>
 				<Property Name="DistPart[4].upgradeCode" Type="Str">{3D104AB3-CE10-43C0-B647-07600754072C}</Property>
 				<Property Name="DistPart[5].flavorID" Type="Str">_full_</Property>
-				<Property Name="DistPart[5].productID" Type="Str">{32AD5200-879B-4D23-9785-747C4B19067E}</Property>
-				<Property Name="DistPart[5].productName" Type="Str">NI-Serial Runtime 21.5</Property>
+				<Property Name="DistPart[5].productID" Type="Str">{ECF7D15D-85F8-4DE3-B7AC-294D306FA70F}</Property>
+				<Property Name="DistPart[5].productName" Type="Str">NI-Serial Runtime 23.3</Property>
 				<Property Name="DistPart[5].upgradeCode" Type="Str">{01D82F43-B48D-46FF-8601-FC4FAAE20F41}</Property>
 				<Property Name="DistPart[6].flavorID" Type="Str">_deployment_</Property>
-				<Property Name="DistPart[6].productID" Type="Str">{016644E7-BFD9-410F-902D-962614CB4E72}</Property>
-				<Property Name="DistPart[6].productName" Type="Str">NI-VISA Runtime 22.5</Property>
+				<Property Name="DistPart[6].productID" Type="Str">{95D24B70-E5A0-4A12-B606-D732ADB7DC8F}</Property>
+				<Property Name="DistPart[6].productName" Type="Str">NI-VISA Runtime 23.5</Property>
 				<Property Name="DistPart[6].upgradeCode" Type="Str">{8627993A-3F66-483C-A562-0D3BA3F267B1}</Property>
 				<Property Name="DistPart[7].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[7].productID" Type="Str">{C3D70637-8D8E-42F8-B1DD-B234C817D122}</Property>
-				<Property Name="DistPart[7].productName" Type="Str">NI LabVIEW Runtime 2022 Q3 (64-bit)</Property>
+				<Property Name="DistPart[7].productID" Type="Str">{3954BD22-4321-42BB-BA6C-F687895AD8F0}</Property>
+				<Property Name="DistPart[7].productName" Type="Str">NI LabVIEW Runtime 2022 Q3 Patch 1 (64-bit)</Property>
 				<Property Name="DistPart[7].SoftDep[0].exclude" Type="Bool">false</Property>
 				<Property Name="DistPart[7].SoftDep[0].productName" Type="Str">NI ActiveX Container (64-bit)</Property>
 				<Property Name="DistPart[7].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
@@ -950,8 +849,8 @@
 				<Property Name="DistPart[7].SoftDepCount" Type="Int">11</Property>
 				<Property Name="DistPart[7].upgradeCode" Type="Str">{FB80C6B7-18E1-3FF4-99A2-719F62FACAD8}</Property>
 				<Property Name="DistPart[8].flavorID" Type="Str">_full_</Property>
-				<Property Name="DistPart[8].productID" Type="Str">{91132DC4-67E5-4CA9-8B74-479FF83EBF21}</Property>
-				<Property Name="DistPart[8].productName" Type="Str">NI Measurement &amp; Automation Explorer 22.5</Property>
+				<Property Name="DistPart[8].productID" Type="Str">{771F415F-1E1C-4560-9F9A-D9F68C46C76F}</Property>
+				<Property Name="DistPart[8].productName" Type="Str">NI Measurement &amp; Automation Explorer 23.5</Property>
 				<Property Name="DistPart[8].SoftDep[0].exclude" Type="Bool">false</Property>
 				<Property Name="DistPart[8].SoftDep[0].productName" Type="Str">NI Error Reporting</Property>
 				<Property Name="DistPart[8].SoftDep[0].upgradeCode" Type="Str">{42E818C6-2B08-4DE7-BD91-B0FD704C119A}</Property>
@@ -960,13 +859,13 @@
 				<Property Name="DistPartCount" Type="Int">9</Property>
 				<Property Name="INST_author" Type="Str">Aarhus University</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
-				<Property Name="INST_buildLocation" Type="Path">/D/Projects/BioSIM/Builds/Installer</Property>
+				<Property Name="INST_buildLocation" Type="Path">/D/Projects/BioSIM/Builds/bin/Installer</Property>
 				<Property Name="INST_buildSpecName" Type="Str">Installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="INST_includeError" Type="Bool">false</Property>
 				<Property Name="INST_installerName" Type="Str">install.exe</Property>
 				<Property Name="INST_productName" Type="Str">BioSIM</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.0</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.4</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">22308000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
@@ -986,122 +885,67 @@
 				<Property Name="RegDestCount" Type="Int">2</Property>
 				<Property Name="Source[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[0].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[0].File[0].name" Type="Str">Biosim Controller.exe</Property>
+				<Property Name="Source[0].File[0].name" Type="Str">Biosim.exe</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].name" Type="Str">Biosim Controller</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].subDir" Type="Str">BioSIM</Property>
 				<Property Name="Source[0].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[0].File[0].tag" Type="Str">{58C928C1-8473-4CEF-96B2-F9CFB2EAA16B}</Property>
 				<Property Name="Source[0].FileCount" Type="Int">1</Property>
-				<Property Name="Source[0].name" Type="Str">BioSIM Controller</Property>
+				<Property Name="Source[0].name" Type="Str">BioSIM</Property>
 				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/BioSIM</Property>
 				<Property Name="Source[0].type" Type="Str">EXE</Property>
 				<Property Name="Source[1].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[1].name" Type="Str">TCam.ini</Property>
-				<Property Name="Source[1].tag" Type="Ref">/My Computer/Build files/TCam.ini</Property>
+				<Property Name="Source[1].name" Type="Str">camera_placeholder.png</Property>
+				<Property Name="Source[1].tag" Type="Ref">/My Computer/Build files/camera_placeholder.png</Property>
 				<Property Name="Source[1].type" Type="Str">File</Property>
-				<Property Name="Source[1].unlock" Type="Bool">true</Property>
-				<Property Name="Source[10].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[10].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[10].File[0].name" Type="Str">ThermoCouple Logger.exe</Property>
-				<Property Name="Source[10].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
-				<Property Name="Source[10].File[0].Shortcut[0].name" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="Source[10].File[0].Shortcut[0].subDir" Type="Str">BioSIM</Property>
-				<Property Name="Source[10].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[10].File[0].tag" Type="Str">{BE78CD84-E0EC-4E22-A1CA-B925114698D2}</Property>
-				<Property Name="Source[10].FileCount" Type="Int">1</Property>
-				<Property Name="Source[10].name" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="Source[10].tag" Type="Ref"></Property>
-				<Property Name="Source[10].type" Type="Str">EXE</Property>
-				<Property Name="Source[2].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[2].name" Type="Str">settings.ini</Property>
-				<Property Name="Source[2].tag" Type="Ref">/My Computer/Build files/settings.ini</Property>
+				<Property Name="Source[2].dest" Type="Str">{D0C73DC0-4A20-4292-91A7-46092AB50822}</Property>
+				<Property Name="Source[2].name" Type="Str">Calibration.ini</Property>
+				<Property Name="Source[2].tag" Type="Ref">/My Computer/Build files/Profiles/Calibration.ini</Property>
 				<Property Name="Source[2].type" Type="Str">File</Property>
-				<Property Name="Source[2].unlock" Type="Bool">true</Property>
-				<Property Name="Source[3].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[3].name" Type="Str">camera_placeholder.png</Property>
-				<Property Name="Source[3].tag" Type="Ref">/My Computer/Build files/camera_placeholder.png</Property>
+				<Property Name="Source[3].dest" Type="Str">{8ACD62BA-487F-493E-9D92-6FE501107719}</Property>
+				<Property Name="Source[3].name" Type="Str">settings.ini</Property>
+				<Property Name="Source[3].tag" Type="Ref">/My Computer/Build files/settings.ini</Property>
 				<Property Name="Source[3].type" Type="Str">File</Property>
-				<Property Name="Source[4].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
+				<Property Name="Source[4].dest" Type="Str">{BCC3C453-BFDD-449E-9682-94496F07531B}</Property>
 				<Property Name="Source[4].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[4].File[0].name" Type="Str">TCE.exe</Property>
-				<Property Name="Source[4].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
-				<Property Name="Source[4].File[0].Shortcut[0].name" Type="Str">Thermal Camera Evaluation</Property>
-				<Property Name="Source[4].File[0].Shortcut[0].subDir" Type="Str">BioSIM</Property>
-				<Property Name="Source[4].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[4].File[0].tag" Type="Str">{765937FA-2BBA-4638-A757-5D4AB3FD30F3}</Property>
-				<Property Name="Source[4].FileCount" Type="Int">1</Property>
-				<Property Name="Source[4].name" Type="Str">Thermal Camera Evaluation</Property>
-				<Property Name="Source[4].tag" Type="Ref">/My Computer/Build Specifications/Thermal Camera Evaluation</Property>
-				<Property Name="Source[4].type" Type="Str">EXE</Property>
-				<Property Name="Source[5].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
+				<Property Name="Source[4].name" Type="Str">placeholder.temp</Property>
+				<Property Name="Source[4].tag" Type="Ref">/My Computer/Build files/placeholder.temp</Property>
+				<Property Name="Source[4].type" Type="Str">File</Property>
 				<Property Name="Source[5].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[5].File[0].name" Type="Str">TCC.exe</Property>
-				<Property Name="Source[5].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
-				<Property Name="Source[5].File[0].Shortcut[0].name" Type="Str">Thermal Camera Calibration</Property>
-				<Property Name="Source[5].File[0].Shortcut[0].subDir" Type="Str">BioSIM</Property>
-				<Property Name="Source[5].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[5].File[0].tag" Type="Str">{4ECC90C8-5AFA-4E65-8969-5270033137DC}</Property>
-				<Property Name="Source[5].FileCount" Type="Int">1</Property>
-				<Property Name="Source[5].name" Type="Str">Thermal Camera Calibration</Property>
-				<Property Name="Source[5].tag" Type="Ref">/My Computer/Build Specifications/Thermal Camera Calibration</Property>
-				<Property Name="Source[5].type" Type="Str">EXE</Property>
-				<Property Name="Source[6].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[6].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[6].File[0].name" Type="Str">TCE.exe</Property>
 				<Property Name="Source[6].File[0].tag" Type="Str">{765937FA-2BBA-4638-A757-5D4AB3FD30F3}</Property>
-				<Property Name="Source[6].name" Type="Str">Calibration.ini</Property>
-				<Property Name="Source[6].tag" Type="Ref">/My Computer/Build files/Calibration.ini</Property>
-				<Property Name="Source[6].type" Type="Str">File</Property>
-				<Property Name="Source[6].unlock" Type="Bool">true</Property>
-				<Property Name="Source[7].dest" Type="Str">{09B5634D-F4F6-46D8-8877-756072EA0D65}</Property>
 				<Property Name="Source[7].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[7].File[0].name" Type="Str">TCC.exe</Property>
 				<Property Name="Source[7].File[0].tag" Type="Str">{4ECC90C8-5AFA-4E65-8969-5270033137DC}</Property>
-				<Property Name="Source[7].name" Type="Str">Big Setup.prt</Property>
-				<Property Name="Source[7].tag" Type="Ref">/My Computer/Build files/Partitions/Big Setup.prt</Property>
-				<Property Name="Source[7].type" Type="Str">File</Property>
-				<Property Name="Source[7].unlock" Type="Bool">true</Property>
-				<Property Name="Source[8].dest" Type="Str">{09B5634D-F4F6-46D8-8877-756072EA0D65}</Property>
 				<Property Name="Source[8].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[8].File[0].name" Type="Str">TCC.exe</Property>
 				<Property Name="Source[8].File[0].tag" Type="Str">{4ECC90C8-5AFA-4E65-8969-5270033137DC}</Property>
-				<Property Name="Source[8].name" Type="Str">Small Setup.prt</Property>
-				<Property Name="Source[8].tag" Type="Ref">/My Computer/Build files/Partitions/Small Setup.prt</Property>
-				<Property Name="Source[8].type" Type="Str">File</Property>
-				<Property Name="Source[8].unlock" Type="Bool">true</Property>
-				<Property Name="Source[9].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[9].name" Type="Str">TCEM.ini</Property>
-				<Property Name="Source[9].tag" Type="Ref">/My Computer/Build files/TCEM.ini</Property>
-				<Property Name="Source[9].type" Type="Str">File</Property>
-				<Property Name="SourceCount" Type="Int">11</Property>
+				<Property Name="SourceCount" Type="Int">5</Property>
 			</Item>
-			<Item Name="Updater" Type="Installer">
+			<Item Name="Update" Type="Installer">
 				<Property Name="Destination[0].name" Type="Str">BioSIM</Property>
 				<Property Name="Destination[0].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
 				<Property Name="Destination[0].tag" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
-				<Property Name="Destination[0].unlock" Type="Bool">true</Property>
-				<Property Name="Destination[1].name" Type="Str">Data</Property>
-				<Property Name="Destination[1].parent" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Destination[1].tag" Type="Str">{91FD325C-AAB7-491E-AB64-7BBBE922D8DB}</Property>
-				<Property Name="Destination[1].type" Type="Str">userFolder</Property>
-				<Property Name="Destination[1].unlock" Type="Bool">true</Property>
-				<Property Name="Destination[2].name" Type="Str">Partitions</Property>
-				<Property Name="Destination[2].parent" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Destination[2].tag" Type="Str">{09B5634D-F4F6-46D8-8877-756072EA0D65}</Property>
-				<Property Name="Destination[2].type" Type="Str">userFolder</Property>
-				<Property Name="Destination[2].unlock" Type="Bool">true</Property>
-				<Property Name="DestinationCount" Type="Int">3</Property>
+				<Property Name="DestinationCount" Type="Int">1</Property>
 				<Property Name="INST_author" Type="Str">Aarhus University</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
-				<Property Name="INST_buildLocation" Type="Path">/D/Projects/BioSIM/Builds/Updater</Property>
-				<Property Name="INST_buildSpecName" Type="Str">Updater</Property>
+				<Property Name="INST_buildLocation" Type="Path">/D/Projects/BioSIM/Builds/bin/Update</Property>
+				<Property Name="INST_buildSpecName" Type="Str">Update</Property>
 				<Property Name="INST_defaultDir" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="INST_includeError" Type="Bool">false</Property>
 				<Property Name="INST_installerName" Type="Str">update.exe</Property>
 				<Property Name="INST_productName" Type="Str">BioSIM</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.0</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.4</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">22308000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
@@ -1121,95 +965,39 @@
 				<Property Name="RegDestCount" Type="Int">2</Property>
 				<Property Name="Source[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[0].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[0].File[0].name" Type="Str">Biosim Controller.exe</Property>
+				<Property Name="Source[0].File[0].name" Type="Str">Biosim.exe</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].name" Type="Str">Biosim Controller</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].subDir" Type="Str">BioSIM</Property>
 				<Property Name="Source[0].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[0].File[0].tag" Type="Str">{58C928C1-8473-4CEF-96B2-F9CFB2EAA16B}</Property>
 				<Property Name="Source[0].FileCount" Type="Int">1</Property>
-				<Property Name="Source[0].name" Type="Str">BioSIM Controller</Property>
+				<Property Name="Source[0].name" Type="Str">BioSIM</Property>
 				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/BioSIM</Property>
 				<Property Name="Source[0].type" Type="Str">EXE</Property>
 				<Property Name="Source[1].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[1].name" Type="Str">TCam.ini</Property>
-				<Property Name="Source[1].tag" Type="Ref">/My Computer/Build files/TCam.ini</Property>
+				<Property Name="Source[1].name" Type="Str">camera_placeholder.png</Property>
+				<Property Name="Source[1].tag" Type="Ref">/My Computer/Build files/camera_placeholder.png</Property>
 				<Property Name="Source[1].type" Type="Str">File</Property>
-				<Property Name="Source[1].unlock" Type="Bool">true</Property>
-				<Property Name="Source[10].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[10].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[10].File[0].name" Type="Str">ThermoCouple Logger.exe</Property>
-				<Property Name="Source[10].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
-				<Property Name="Source[10].File[0].Shortcut[0].name" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="Source[10].File[0].Shortcut[0].subDir" Type="Str">BioSIM</Property>
-				<Property Name="Source[10].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[10].File[0].tag" Type="Str">{BE78CD84-E0EC-4E22-A1CA-B925114698D2}</Property>
-				<Property Name="Source[10].FileCount" Type="Int">1</Property>
-				<Property Name="Source[10].name" Type="Str">ThermoCouple Logger</Property>
-				<Property Name="Source[10].tag" Type="Ref"></Property>
-				<Property Name="Source[10].type" Type="Str">EXE</Property>
-				<Property Name="Source[2].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[2].name" Type="Str">settings.ini</Property>
-				<Property Name="Source[2].tag" Type="Ref">/My Computer/Build files/settings.ini</Property>
-				<Property Name="Source[2].type" Type="Str">File</Property>
-				<Property Name="Source[2].unlock" Type="Bool">true</Property>
-				<Property Name="Source[3].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[3].name" Type="Str">camera_placeholder.png</Property>
-				<Property Name="Source[3].tag" Type="Ref">/My Computer/Build files/camera_placeholder.png</Property>
-				<Property Name="Source[3].type" Type="Str">File</Property>
-				<Property Name="Source[4].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[4].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[4].File[0].name" Type="Str">TCE.exe</Property>
-				<Property Name="Source[4].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
-				<Property Name="Source[4].File[0].Shortcut[0].name" Type="Str">Thermal Camera Evaluation</Property>
-				<Property Name="Source[4].File[0].Shortcut[0].subDir" Type="Str">BioSIM</Property>
-				<Property Name="Source[4].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[4].File[0].tag" Type="Str">{765937FA-2BBA-4638-A757-5D4AB3FD30F3}</Property>
-				<Property Name="Source[4].FileCount" Type="Int">1</Property>
-				<Property Name="Source[4].name" Type="Str">Thermal Camera Evaluation</Property>
-				<Property Name="Source[4].tag" Type="Ref">/My Computer/Build Specifications/Thermal Camera Evaluation</Property>
-				<Property Name="Source[4].type" Type="Str">EXE</Property>
-				<Property Name="Source[5].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[5].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[5].File[0].name" Type="Str">TCC.exe</Property>
-				<Property Name="Source[5].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
-				<Property Name="Source[5].File[0].Shortcut[0].name" Type="Str">Thermal Camera Calibration</Property>
-				<Property Name="Source[5].File[0].Shortcut[0].subDir" Type="Str">BioSIM</Property>
-				<Property Name="Source[5].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[5].File[0].tag" Type="Str">{4ECC90C8-5AFA-4E65-8969-5270033137DC}</Property>
-				<Property Name="Source[5].FileCount" Type="Int">1</Property>
-				<Property Name="Source[5].name" Type="Str">Thermal Camera Calibration</Property>
-				<Property Name="Source[5].tag" Type="Ref">/My Computer/Build Specifications/Thermal Camera Calibration</Property>
-				<Property Name="Source[5].type" Type="Str">EXE</Property>
-				<Property Name="Source[6].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[6].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[6].File[0].name" Type="Str">TCE.exe</Property>
 				<Property Name="Source[6].File[0].tag" Type="Str">{765937FA-2BBA-4638-A757-5D4AB3FD30F3}</Property>
-				<Property Name="Source[6].name" Type="Str">Calibration.ini</Property>
-				<Property Name="Source[6].tag" Type="Ref">/My Computer/Build files/Calibration.ini</Property>
-				<Property Name="Source[6].type" Type="Str">File</Property>
-				<Property Name="Source[6].unlock" Type="Bool">true</Property>
-				<Property Name="Source[7].dest" Type="Str">{09B5634D-F4F6-46D8-8877-756072EA0D65}</Property>
 				<Property Name="Source[7].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[7].File[0].name" Type="Str">TCC.exe</Property>
 				<Property Name="Source[7].File[0].tag" Type="Str">{4ECC90C8-5AFA-4E65-8969-5270033137DC}</Property>
-				<Property Name="Source[7].name" Type="Str">Big Setup.prt</Property>
-				<Property Name="Source[7].tag" Type="Ref">/My Computer/Build files/Partitions/Big Setup.prt</Property>
-				<Property Name="Source[7].type" Type="Str">File</Property>
-				<Property Name="Source[7].unlock" Type="Bool">true</Property>
-				<Property Name="Source[8].dest" Type="Str">{09B5634D-F4F6-46D8-8877-756072EA0D65}</Property>
 				<Property Name="Source[8].File[0].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
 				<Property Name="Source[8].File[0].name" Type="Str">TCC.exe</Property>
 				<Property Name="Source[8].File[0].tag" Type="Str">{4ECC90C8-5AFA-4E65-8969-5270033137DC}</Property>
-				<Property Name="Source[8].name" Type="Str">Small Setup.prt</Property>
-				<Property Name="Source[8].tag" Type="Ref">/My Computer/Build files/Partitions/Small Setup.prt</Property>
-				<Property Name="Source[8].type" Type="Str">File</Property>
-				<Property Name="Source[8].unlock" Type="Bool">true</Property>
-				<Property Name="Source[9].dest" Type="Str">{4B7C7F5D-6E6D-4786-BBED-E06C37A5A212}</Property>
-				<Property Name="Source[9].name" Type="Str">TCEM.ini</Property>
-				<Property Name="Source[9].tag" Type="Ref">/My Computer/Build files/TCEM.ini</Property>
-				<Property Name="Source[9].type" Type="Str">File</Property>
-				<Property Name="SourceCount" Type="Int">11</Property>
+				<Property Name="SourceCount" Type="Int">2</Property>
 			</Item>
 		</Item>
 	</Item>

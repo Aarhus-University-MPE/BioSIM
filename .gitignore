@@ -1,4 +1,5 @@
-/Builds/
+/Builds/bin/
 /data/*
 /src/LabVIEW/Data
-.zip
+*.zip
+*.exe

@@ -1,0 +1,5 @@
+;!@Install@!UTF-8!
+Title="BioSIM Controller Updater"
+BeginPrompt="Do you want to update BioSIM Controller?"
+RunProgram="./Update/Volume/update.exe"
+;!@InstallEnd@!

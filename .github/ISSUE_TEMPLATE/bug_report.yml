@@ -26,6 +26,15 @@ body:
       options:
         - General
         - Hardware Issue
+        - Connection Issue
+        - Control
+        - AC PSU
+        - DC PSU
+        - Cooling
+        - Sensor
+        - Temperature
+        - Humidity
+        - Camera
         - Performance
         - Other
     validations:

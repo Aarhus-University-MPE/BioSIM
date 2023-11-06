@@ -1,0 +1,5 @@
+;!@Install@!UTF-8!
+Title="BioSIM Controller Installer"
+BeginPrompt="Do you want to install BioSIM Controller?"
+RunProgram="./Installer/Volume/install.exe"
+;!@InstallEnd@!
