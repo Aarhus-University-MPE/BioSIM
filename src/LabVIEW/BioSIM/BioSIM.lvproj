@@ -80,12 +80,15 @@
 				<Item Name="cDAQ_Connect.vi" Type="VI" URL="../cDAQ_Connect.vi"/>
 				<Item Name="cDAQ_Terminate.vi" Type="VI" URL="../cDAQ_Terminate.vi"/>
 				<Item Name="CDAQ_Scan.vi" Type="VI" URL="../CDAQ_Scan.vi"/>
+				<Item Name="SensorClusterUnpack.vi" Type="VI" URL="../SensorClusterUnpack.vi"/>
 				<Item Name="RollingGradient.vi" Type="VI" URL="../RollingGradient.vi"/>
+				<Item Name="SensorDataAcquisition.vi" Type="VI" URL="../SensorDataAcquisition.vi"/>
 			</Item>
 			<Item Name="Data Logging" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="DataFile_Create.vi" Type="VI" URL="../DataFile_Create.vi"/>
 				<Item Name="DataFile_Append.vi" Type="VI" URL="../DataFile_Append.vi"/>
+				<Item Name="Data_Build_CSV.vi" Type="VI" URL="../Data_Build_CSV.vi"/>
 				<Item Name="Label_Check.vi" Type="VI" URL="../Label_Check.vi"/>
 				<Item Name="Label_Increment.vi" Type="VI" URL="../Label_Increment.vi"/>
 				<Item Name="Partition_Format.vi" Type="VI" URL="../Partition_Format.vi"/>
@@ -95,9 +98,11 @@
 				<Item Name="SetupFile_GetElapsedDuration.vi" Type="VI" URL="../SetupFile_GetElapsedDuration.vi"/>
 				<Item Name="Buffer_Initialize.vi" Type="VI" URL="../Buffer_Initialize.vi"/>
 				<Item Name="Buffer_Append.vi" Type="VI" URL="../Buffer_Append.vi"/>
+				<Item Name="Buffer_Read.vi" Type="VI" URL="../Buffer_Read.vi"/>
 				<Item Name="DAQ_Status_Read.vi" Type="VI" URL="../DAQ_Status_Read.vi"/>
 				<Item Name="DAQ_Package.vi" Type="VI" URL="../DAQ_Package.vi"/>
 				<Item Name="WriteFile.vi" Type="VI" URL="../WriteFile.vi"/>
+				<Item Name="Image_Save.vi" Type="VI" URL="../Image_Save.vi"/>
 			</Item>
 			<Item Name="Freeze" Type="Folder">
 				<Item Name="Freeze_Check.vi" Type="VI" URL="../Freeze_Check.vi"/>
@@ -157,6 +162,7 @@
 					<Item Name="Get File Info.vi" Type="VI" URL="../Get File Info.vi"/>
 					<Item Name="Windows SYSTEMTIME to String.vi" Type="VI" URL="../Windows SYSTEMTIME to String.vi"/>
 					<Item Name="DAQ_Control.vi" Type="VI" URL="../DAQ_Control.vi"/>
+					<Item Name="Timestamp_HMS.vi" Type="VI" URL="../Timestamp_HMS.vi"/>
 				</Item>
 				<Item Name="Converters" Type="Folder">
 					<Item Name="System_Exit.vi" Type="VI" URL="../System_Exit.vi"/>
@@ -166,9 +172,17 @@
 					<Item Name="Camera_Frequency.vi" Type="VI" URL="../Camera_Frequency.vi"/>
 					<Item Name="SampleRate_Convert.vi" Type="VI" URL="../SampleRate_Convert.vi"/>
 				</Item>
+				<Item Name="Paths" Type="Folder">
+					<Item Name="DataFolder.vi" Type="VI" URL="../DataFolder.vi"/>
+					<Item Name="Datafile_Path.vi" Type="VI" URL="../Datafile_Path.vi"/>
+					<Item Name="Image_Path.vi" Type="VI" URL="../Image_Path.vi"/>
+				</Item>
 				<Item Name="DataCluster.ctl" Type="VI" URL="../DataCluster.ctl"/>
 				<Item Name="TCE_Config.ctl" Type="VI" URL="../TCE_Config.ctl"/>
 				<Item Name="DataCluster_AC_PSU.ctl" Type="VI" URL="../DataCluster_AC_PSU.ctl"/>
+				<Item Name="SensorCluster.ctl" Type="VI" URL="../SensorCluster.ctl"/>
+				<Item Name="DataQueue.ctl" Type="VI" URL="../DataQueue.ctl"/>
+				<Item Name="SensorClusterHistory.ctl" Type="VI" URL="../SensorClusterHistory.ctl"/>
 				<Item Name="RunTimeMenu.rtm" Type="Document" URL="../RunTimeMenu.rtm"/>
 				<Item Name="RunTimeMenu_Partition.rtm" Type="Document" URL="../RunTimeMenu_Partition.rtm"/>
 			</Item>
@@ -195,6 +209,41 @@
 				<Item Name="Manual_Cool_Heat_V2.vi" Type="VI" URL="../Manual_Cool_Heat_V2.vi"/>
 				<Item Name="Manual_Cool_Heat.vi" Type="VI" URL="../Manual_Cool_Heat.vi"/>
 				<Item Name="Manual_Cool_Heat_Converter.vi" Type="VI" URL="../Manual_Cool_Heat_Converter.vi"/>
+			</Item>
+			<Item Name="Legacy" Type="Folder">
+				<Item Name="TCE" Type="Folder">
+					<Item Name="Config" Type="Folder">
+						<Item Name="TCE_Config_Load.vi" Type="VI" URL="../TCE_Config_Load.vi"/>
+						<Item Name="TCE_Config_Save.vi" Type="VI" URL="../TCE_Config_Save.vi"/>
+					</Item>
+					<Item Name="Partition" Type="Folder">
+						<Item Name="WellPartition_Index.vi" Type="VI" URL="../WellPartition_Index.vi"/>
+						<Item Name="Partition_Sort_Reorder.vi" Type="VI" URL="../Partition_Sort_Reorder.vi"/>
+						<Item Name="Partition_Sort.vi" Type="VI" URL="../Partition_Sort.vi"/>
+					</Item>
+					<Item Name="Frozen Fraction" Type="Folder">
+						<Item Name="FrozenFraction_Calcualte.vi" Type="VI" URL="../FrozenFraction_Calcualte.vi"/>
+						<Item Name="FrozenFraction_Extraction.vi" Type="VI" URL="../FrozenFraction_Extraction.vi"/>
+						<Item Name="FrozenFraction_Concatinate.vi" Type="VI" URL="../FrozenFraction_Concatinate.vi"/>
+					</Item>
+					<Item Name="Temps" Type="Folder">
+						<Item Name="TCam_WellCalculater.vi" Type="VI" URL="../TCam_WellCalculater.vi"/>
+						<Item Name="TCam_WellTemp.vi" Type="VI" URL="../TCam_WellTemp.vi"/>
+						<Item Name="TCam_WellPixels.vi" Type="VI" URL="../TCam_WellPixels.vi"/>
+						<Item Name="TCam_IMGTempExtract.vi" Type="VI" URL="../TCam_IMGTempExtract.vi"/>
+						<Item Name="TCam_ArrayTempExtract.vi" Type="VI" URL="../TCam_ArrayTempExtract.vi"/>
+						<Item Name="TCam_PointCalculator.vi" Type="VI" URL="../TCam_PointCalculator.vi"/>
+						<Item Name="TCam_FixpointTemps.vi" Type="VI" URL="../TCam_FixpointTemps.vi"/>
+					</Item>
+					<Item Name="UI" Type="Folder">
+						<Item Name="TCE_Config.vi" Type="VI" URL="../TCE_Config.vi"/>
+					</Item>
+					<Item Name="DataArray_SaveSelection.vi" Type="VI" URL="../DataArray_SaveSelection.vi"/>
+					<Item Name="TCE_SaveConfiguration.vi" Type="VI" URL="../TCE_SaveConfiguration.vi"/>
+					<Item Name="RunTimeMenu_TCE.rtm" Type="Document" URL="../RunTimeMenu_TCE.rtm"/>
+				</Item>
+				<Item Name="TCC.vi" Type="VI" URL="../TCC.vi"/>
+				<Item Name="TCE.vi" Type="VI" URL="../TCE.vi"/>
 			</Item>
 		</Item>
 		<Item Name="Test Functions" Type="Folder">
@@ -268,40 +317,7 @@
 			<Item Name="LogoBio.ico" Type="Document" URL="../resources/LogoBio.ico"/>
 			<Item Name="LogoClean.ico" Type="Document" URL="../resources/LogoClean.ico"/>
 		</Item>
-		<Item Name="TCE" Type="Folder">
-			<Item Name="Config" Type="Folder">
-				<Item Name="TCE_Config_Load.vi" Type="VI" URL="../TCE_Config_Load.vi"/>
-				<Item Name="TCE_Config_Save.vi" Type="VI" URL="../TCE_Config_Save.vi"/>
-			</Item>
-			<Item Name="Partition" Type="Folder">
-				<Item Name="WellPartition_Index.vi" Type="VI" URL="../WellPartition_Index.vi"/>
-				<Item Name="Partition_Sort_Reorder.vi" Type="VI" URL="../Partition_Sort_Reorder.vi"/>
-				<Item Name="Partition_Sort.vi" Type="VI" URL="../Partition_Sort.vi"/>
-			</Item>
-			<Item Name="Frozen Fraction" Type="Folder">
-				<Item Name="FrozenFraction_Calcualte.vi" Type="VI" URL="../FrozenFraction_Calcualte.vi"/>
-				<Item Name="FrozenFraction_Extraction.vi" Type="VI" URL="../FrozenFraction_Extraction.vi"/>
-				<Item Name="FrozenFraction_Concatinate.vi" Type="VI" URL="../FrozenFraction_Concatinate.vi"/>
-			</Item>
-			<Item Name="Temps" Type="Folder">
-				<Item Name="TCam_WellCalculater.vi" Type="VI" URL="../TCam_WellCalculater.vi"/>
-				<Item Name="TCam_WellTemp.vi" Type="VI" URL="../TCam_WellTemp.vi"/>
-				<Item Name="TCam_WellPixels.vi" Type="VI" URL="../TCam_WellPixels.vi"/>
-				<Item Name="TCam_IMGTempExtract.vi" Type="VI" URL="../TCam_IMGTempExtract.vi"/>
-				<Item Name="TCam_ArrayTempExtract.vi" Type="VI" URL="../TCam_ArrayTempExtract.vi"/>
-				<Item Name="TCam_PointCalculator.vi" Type="VI" URL="../TCam_PointCalculator.vi"/>
-				<Item Name="TCam_FixpointTemps.vi" Type="VI" URL="../TCam_FixpointTemps.vi"/>
-			</Item>
-			<Item Name="UI" Type="Folder">
-				<Item Name="TCE_Config.vi" Type="VI" URL="../TCE_Config.vi"/>
-			</Item>
-			<Item Name="DataArray_SaveSelection.vi" Type="VI" URL="../DataArray_SaveSelection.vi"/>
-			<Item Name="TCE_SaveConfiguration.vi" Type="VI" URL="../TCE_SaveConfiguration.vi"/>
-			<Item Name="RunTimeMenu_TCE.rtm" Type="Document" URL="../RunTimeMenu_TCE.rtm"/>
-		</Item>
 		<Item Name="main.vi" Type="VI" URL="../main.vi"/>
-		<Item Name="TCC.vi" Type="VI" URL="../TCC.vi"/>
-		<Item Name="TCE.vi" Type="VI" URL="../TCE.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
@@ -661,6 +677,8 @@
 				<Item Name="DAQmx Read (Power Wfm 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power Wfm 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Read (Power 1D Wfm NChan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power 1D Wfm NChan 1Samp).vi"/>
 				<Item Name="DAQmx Read (Power 1D Wfm NChan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Power 1D Wfm NChan NSamp).vi"/>
+				<Item Name="System Directory Type.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/System Directory Type.ctl"/>
+				<Item Name="Get System Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/Get System Directory.vi"/>
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
