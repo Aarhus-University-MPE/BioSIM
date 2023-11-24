@@ -40,7 +40,11 @@
 				<Item Name="Hardware" Type="Folder">
 					<Item Name="TCam_Scan.vi" Type="VI" URL="../TCam_Scan.vi"/>
 					<Item Name="TCam_Focus.vi" Type="VI" URL="../TCam_Focus.vi"/>
-					<Item Name="TCam_Config.vi" Type="VI" URL="../TCam_Config.vi"/>
+					<Item Name="Camera_Config.vi" Type="VI" URL="../Camera_Config.vi"/>
+					<Item Name="Camera_ROI_Set.vi" Type="VI" URL="../Camera_ROI_Set.vi"/>
+					<Item Name="Camera_Format.vi" Type="VI" URL="../Camera_Format.vi"/>
+					<Item Name="Camera_Config_Init.vi" Type="VI" URL="../Camera_Config_Init.vi"/>
+					<Item Name="Camera_Init.vi" Type="VI" URL="../Camera_Init.vi"/>
 				</Item>
 				<Item Name="System" Type="Folder">
 					<Item Name="TCam_CalibrationLoad.vi" Type="VI" URL="../TCam_CalibrationLoad.vi"/>
@@ -49,12 +53,14 @@
 					<Item Name="SingleTempUpdater.vi" Type="VI" URL="../SingleTempUpdater.vi"/>
 					<Item Name="SingleWellUpdater.vi" Type="VI" URL="../SingleWellUpdater.vi"/>
 					<Item Name="WellCoordinateChecker.vi" Type="VI" URL="../WellCoordinateChecker.vi"/>
+					<Item Name="Image_Allocation.vi" Type="VI" URL="../Image_Allocation.vi"/>
 				</Item>
 				<Item Name="Camera_Rectangle_To_ROI.vi" Type="VI" URL="../Camera_Rectangle_To_ROI.vi"/>
 				<Item Name="Camera_ROI_To_Rectangle.vi" Type="VI" URL="../Camera_ROI_To_Rectangle.vi"/>
 				<Item Name="Camera_ROI_Extract.vi" Type="VI" URL="../Camera_ROI_Extract.vi"/>
 				<Item Name="Camera_Grab.vi" Type="VI" URL="../Camera_Grab.vi"/>
 				<Item Name="Camera_Feed.vi" Type="VI" URL="../Camera_Feed.vi"/>
+				<Item Name="ComputerVision.vi" Type="VI" URL="../ComputerVision.vi"/>
 				<Item Name="DataCluster_TCAL.ctl" Type="VI" URL="../DataCluster_TCAL.ctl"/>
 			</Item>
 			<Item Name="cDAQ" Type="Folder">
@@ -64,16 +70,17 @@
 					<Item Name="Thermistor_Callibration_Save.vi" Type="VI" URL="../Thermistor_Callibration_Save.vi"/>
 					<Item Name="Thermistor_Conversion.vi" Type="VI" URL="../Thermistor_Conversion.vi"/>
 					<Item Name="Thermistor_Manual_Read.vi" Type="VI" URL="../Thermistor_Manual_Read.vi"/>
-					<Item Name="cDAQ_DO_Connect.vi" Type="VI" URL="../cDAQ_DO_Connect.vi"/>
-					<Item Name="cDAQ_DO_Initialize.vi" Type="VI" URL="../cDAQ_DO_Initialize.vi"/>
-					<Item Name="cDAQ_DO_Write.vi" Type="VI" URL="../cDAQ_DO_Write.vi"/>
+					<Item Name="Thermistor_Temp_Stamp.vi" Type="VI" URL="../Thermistor_Temp_Stamp.vi"/>
+					<Item Name="cDAQ_AI_Connect.vi" Type="VI" URL="../cDAQ_AI_Connect.vi"/>
 				</Item>
 				<Item Name="Analog Output" Type="Folder">
 					<Item Name="cDAQ_AO_Connect.vi" Type="VI" URL="../cDAQ_AO_Connect.vi"/>
 					<Item Name="cDAQ_AO_Initialize.vi" Type="VI" URL="../cDAQ_AO_Initialize.vi"/>
 				</Item>
 				<Item Name="Digital Output" Type="Folder">
-					<Item Name="Thermistor_Temp_Stamp.vi" Type="VI" URL="../Thermistor_Temp_Stamp.vi"/>
+					<Item Name="cDAQ_DO_Connect.vi" Type="VI" URL="../cDAQ_DO_Connect.vi"/>
+					<Item Name="cDAQ_DO_Initialize.vi" Type="VI" URL="../cDAQ_DO_Initialize.vi"/>
+					<Item Name="cDAQ_DO_Write.vi" Type="VI" URL="../cDAQ_DO_Write.vi"/>
 				</Item>
 				<Item Name="cDAQ_Channels.vi" Type="VI" URL="../cDAQ_Channels.vi"/>
 				<Item Name="cDAQ_Read.vi" Type="VI" URL="../cDAQ_Read.vi"/>
@@ -103,10 +110,6 @@
 				<Item Name="DAQ_Package.vi" Type="VI" URL="../DAQ_Package.vi"/>
 				<Item Name="WriteFile.vi" Type="VI" URL="../WriteFile.vi"/>
 				<Item Name="Image_Save.vi" Type="VI" URL="../Image_Save.vi"/>
-			</Item>
-			<Item Name="Freeze" Type="Folder">
-				<Item Name="Freeze_Check.vi" Type="VI" URL="../Freeze_Check.vi"/>
-				<Item Name="Freeze_Threshold.vi" Type="VI" URL="../Freeze_Threshold.vi"/>
 			</Item>
 			<Item Name="PID" Type="Folder">
 				<Item Name="PID_Calculate.vi" Type="VI" URL="../PID_Calculate.vi"/>
@@ -318,6 +321,9 @@
 			<Item Name="LogoClean.ico" Type="Document" URL="../resources/LogoClean.ico"/>
 		</Item>
 		<Item Name="main.vi" Type="VI" URL="../main.vi"/>
+		<Item Name="Tag-t&apos;DataCluster.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-t&apos;DataCluster.ctl&apos;.lvlib"/>
+		<Item Name="cDAQ_AO_Write.vi" Type="VI" URL="../cDAQ_AO_Write.vi"/>
+		<Item Name="AO_Converter.vi" Type="VI" URL="../AO_Converter.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
@@ -707,7 +713,6 @@
 			<Item Name="PipeLogic.lvclass" Type="LVClass" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/PipeLogic/PipeLogic.lvclass"/>
 			<Item Name="Update Probe Details String.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ProbeSupport/Update Probe Details String.vi"/>
 			<Item Name="ProbeFormatting.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ProbeSupport/ProbeFormatting.vi"/>
-			<Item Name="Tag-t&apos;DataCluster.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-t&apos;DataCluster.ctl&apos;.lvlib"/>
 			<Item Name="Stream-bool.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Stream-bool.lvlib"/>
 			<Item Name="Tag-c(c(ref(LVObjVI()),bool),bool,bool,u32[Cool,Heat]).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(c(ref(LVObjVI()),bool),bool,bool,u32[Cool,Heat]).lvlib"/>
 			<Item Name="Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib"/>
