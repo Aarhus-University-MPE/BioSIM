@@ -55,6 +55,12 @@
 					<Item Name="WellCoordinateChecker.vi" Type="VI" URL="../WellCoordinateChecker.vi"/>
 					<Item Name="Image_Allocation.vi" Type="VI" URL="../Image_Allocation.vi"/>
 				</Item>
+				<Item Name="Camera Feed" Type="Folder">
+					<Item Name="Camera_Feed_Config.vi" Type="VI" URL="../Camera_Feed_Config.vi"/>
+					<Item Name="Camera_Feed_Grab.vi" Type="VI" URL="../Camera_Feed_Grab.vi"/>
+					<Item Name="Camera_Feed_Crop.vi" Type="VI" URL="../Camera_Feed_Crop.vi"/>
+					<Item Name="Camera_Feed_ToolSelect.vi" Type="VI" URL="../Camera_Feed_ToolSelect.vi"/>
+				</Item>
 				<Item Name="Camera_Rectangle_To_ROI.vi" Type="VI" URL="../Camera_Rectangle_To_ROI.vi"/>
 				<Item Name="Camera_ROI_To_Rectangle.vi" Type="VI" URL="../Camera_ROI_To_Rectangle.vi"/>
 				<Item Name="Camera_ROI_Extract.vi" Type="VI" URL="../Camera_ROI_Extract.vi"/>
@@ -76,6 +82,8 @@
 				<Item Name="Analog Output" Type="Folder">
 					<Item Name="cDAQ_AO_Connect.vi" Type="VI" URL="../cDAQ_AO_Connect.vi"/>
 					<Item Name="cDAQ_AO_Initialize.vi" Type="VI" URL="../cDAQ_AO_Initialize.vi"/>
+					<Item Name="cDAQ_AO_Write.vi" Type="VI" URL="../cDAQ_AO_Write.vi"/>
+					<Item Name="AO_Converter.vi" Type="VI" URL="../AO_Converter.vi"/>
 				</Item>
 				<Item Name="Digital Output" Type="Folder">
 					<Item Name="cDAQ_DO_Connect.vi" Type="VI" URL="../cDAQ_DO_Connect.vi"/>
@@ -91,10 +99,15 @@
 				<Item Name="RollingGradient.vi" Type="VI" URL="../RollingGradient.vi"/>
 				<Item Name="SensorDataAcquisition.vi" Type="VI" URL="../SensorDataAcquisition.vi"/>
 			</Item>
+			<Item Name="Humidity Sensor" Type="Folder">
+				<Item Name="Humidity_Read.vi" Type="VI" URL="../Humidity_Read.vi"/>
+			</Item>
 			<Item Name="Data Logging" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="DataFile_Create.vi" Type="VI" URL="../DataFile_Create.vi"/>
 				<Item Name="DataFile_Append.vi" Type="VI" URL="../DataFile_Append.vi"/>
+				<Item Name="DataAcquisition_Stop_Master.vi" Type="VI" URL="../DataAcquisition_Stop_Master.vi"/>
+				<Item Name="DataAcquisition_Stop.vi" Type="VI" URL="../DataAcquisition_Stop.vi"/>
 				<Item Name="Data_Build_CSV.vi" Type="VI" URL="../Data_Build_CSV.vi"/>
 				<Item Name="Label_Check.vi" Type="VI" URL="../Label_Check.vi"/>
 				<Item Name="Label_Increment.vi" Type="VI" URL="../Label_Increment.vi"/>
@@ -120,7 +133,10 @@
 				<Item Name="Converters" Type="Folder">
 					<Item Name="Convert_DC_VoltPct.vi" Type="VI" URL="../Convert_DC_VoltPct.vi"/>
 					<Item Name="Convert_DC_PctVolt.vi" Type="VI" URL="../Convert_DC_PctVolt.vi"/>
+					<Item Name="DC_Converter.vi" Type="VI" URL="../DC_Converter.vi"/>
 				</Item>
+				<Item Name="DC_Toggle.vi" Type="VI" URL="../DC_Toggle.vi"/>
+				<Item Name="DC_Pulse.vi" Type="VI" URL="../DC_Pulse.vi"/>
 			</Item>
 			<Item Name="PSU AC" Type="Folder">
 				<Item Name="Converters" Type="Folder">
@@ -128,6 +144,8 @@
 					<Item Name="Convert_AC_FreqPct.vi" Type="VI" URL="../Convert_AC_FreqPct.vi"/>
 					<Item Name="Convert_AC_PctVolt.vi" Type="VI" URL="../Convert_AC_PctVolt.vi"/>
 					<Item Name="Convert_AC_VoltPct.vi" Type="VI" URL="../Convert_AC_VoltPct.vi"/>
+					<Item Name="AC_Voltage_Cap.vi" Type="VI" URL="../AC_Voltage_Cap.vi"/>
+					<Item Name="AC_Freq_Cap.vi" Type="VI" URL="../AC_Freq_Cap.vi"/>
 				</Item>
 				<Item Name="PSU_Command.vi" Type="VI" URL="../PSU_Command.vi"/>
 				<Item Name="PSU_Output.vi" Type="VI" URL="../PSU_Output.vi"/>
@@ -135,6 +153,7 @@
 				<Item Name="PSU_VOUT_Converter.vi" Type="VI" URL="../PSU_VOUT_Converter.vi"/>
 				<Item Name="VISA_Scan.vi" Type="VI" URL="../VISA_Scan.vi"/>
 				<Item Name="AC_State_Converter.vi" Type="VI" URL="../AC_State_Converter.vi"/>
+				<Item Name="AC_Toggle.vi" Type="VI" URL="../AC_Toggle.vi"/>
 			</Item>
 			<Item Name="Settings" Type="Folder">
 				<Item Name="Options.vi" Type="VI" URL="../Options.vi"/>
@@ -166,6 +185,9 @@
 					<Item Name="Windows SYSTEMTIME to String.vi" Type="VI" URL="../Windows SYSTEMTIME to String.vi"/>
 					<Item Name="DAQ_Control.vi" Type="VI" URL="../DAQ_Control.vi"/>
 					<Item Name="Timestamp_HMS.vi" Type="VI" URL="../Timestamp_HMS.vi"/>
+					<Item Name="Data_Initialize.vi" Type="VI" URL="../Data_Initialize.vi"/>
+					<Item Name="System_Update_Check.vi" Type="VI" URL="../System_Update_Check.vi"/>
+					<Item Name="CPU_Overload_Halt.vi" Type="VI" URL="../CPU_Overload_Halt.vi"/>
 				</Item>
 				<Item Name="Converters" Type="Folder">
 					<Item Name="System_Exit.vi" Type="VI" URL="../System_Exit.vi"/>
@@ -321,9 +343,6 @@
 			<Item Name="LogoClean.ico" Type="Document" URL="../resources/LogoClean.ico"/>
 		</Item>
 		<Item Name="main.vi" Type="VI" URL="../main.vi"/>
-		<Item Name="Tag-t&apos;DataCluster.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-t&apos;DataCluster.ctl&apos;.lvlib"/>
-		<Item Name="cDAQ_AO_Write.vi" Type="VI" URL="../cDAQ_AO_Write.vi"/>
-		<Item Name="AO_Converter.vi" Type="VI" URL="../AO_Converter.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
@@ -716,6 +735,7 @@
 			<Item Name="Stream-bool.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Stream-bool.lvlib"/>
 			<Item Name="Tag-c(c(ref(LVObjVI()),bool),bool,bool,u32[Cool,Heat]).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(c(ref(LVObjVI()),bool),bool,bool,u32[Cool,Heat]).lvlib"/>
 			<Item Name="Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib"/>
+			<Item Name="Tag-t&apos;DataCluster.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-t&apos;DataCluster.ctl&apos;.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="BioSIM" Type="EXE">
