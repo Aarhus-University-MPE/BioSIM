@@ -766,7 +766,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/bin/Full Build</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{27D8B2BC-76A3-474D-8C11-FD95C8E7081D}</Property>
-				<Property Name="Bld_version.build" Type="Int">23</Property>
+				<Property Name="Bld_version.build" Type="Int">24</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.patch" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Biosim.exe</Property>
@@ -912,7 +912,7 @@
 				<Property Name="INST_includeError" Type="Bool">false</Property>
 				<Property Name="INST_installerName" Type="Str">install.exe</Property>
 				<Property Name="INST_productName" Type="Str">BioSIM</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.6</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.7</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">22308000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
@@ -992,7 +992,7 @@
 				<Property Name="INST_includeError" Type="Bool">false</Property>
 				<Property Name="INST_installerName" Type="Str">update.exe</Property>
 				<Property Name="INST_productName" Type="Str">BioSIM</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.6</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.7</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">22308000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
