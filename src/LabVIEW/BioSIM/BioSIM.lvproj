@@ -134,6 +134,7 @@
 					<Item Name="Convert_DC_VoltPct.vi" Type="VI" URL="../Convert_DC_VoltPct.vi"/>
 					<Item Name="Convert_DC_PctVolt.vi" Type="VI" URL="../Convert_DC_PctVolt.vi"/>
 					<Item Name="DC_Converter.vi" Type="VI" URL="../DC_Converter.vi"/>
+					<Item Name="DC_Converter_Pct.vi" Type="VI" URL="../DC_Converter_Pct.vi"/>
 				</Item>
 				<Item Name="DC_Toggle.vi" Type="VI" URL="../DC_Toggle.vi"/>
 				<Item Name="DC_Pulse.vi" Type="VI" URL="../DC_Pulse.vi"/>
@@ -157,6 +158,8 @@
 			</Item>
 			<Item Name="Settings" Type="Folder">
 				<Item Name="Options.vi" Type="VI" URL="../Options.vi"/>
+				<Item Name="Options_CV.vi" Type="VI" URL="../Options_CV.vi"/>
+				<Item Name="Options_PID.vi" Type="VI" URL="../Options_PID.vi"/>
 				<Item Name="Partition_Setup.vi" Type="VI" URL="../Partition_Setup.vi"/>
 				<Item Name="Settings_Config.vi" Type="VI" URL="../Settings_Config.vi"/>
 				<Item Name="Settings_Load.vi" Type="VI" URL="../Settings_Load.vi"/>
@@ -204,12 +207,14 @@
 					<Item Name="Datafile_Path.vi" Type="VI" URL="../Datafile_Path.vi"/>
 					<Item Name="Image_Path.vi" Type="VI" URL="../Image_Path.vi"/>
 				</Item>
-				<Item Name="DataCluster.ctl" Type="VI" URL="../DataCluster.ctl"/>
-				<Item Name="TCE_Config.ctl" Type="VI" URL="../TCE_Config.ctl"/>
-				<Item Name="DataCluster_AC_PSU.ctl" Type="VI" URL="../DataCluster_AC_PSU.ctl"/>
-				<Item Name="SensorCluster.ctl" Type="VI" URL="../SensorCluster.ctl"/>
-				<Item Name="DataQueue.ctl" Type="VI" URL="../DataQueue.ctl"/>
-				<Item Name="SensorClusterHistory.ctl" Type="VI" URL="../SensorClusterHistory.ctl"/>
+				<Item Name="Clusters" Type="Folder">
+					<Item Name="DataCluster.ctl" Type="VI" URL="../DataCluster.ctl"/>
+					<Item Name="TCE_Config.ctl" Type="VI" URL="../TCE_Config.ctl"/>
+					<Item Name="DataCluster_AC_PSU.ctl" Type="VI" URL="../DataCluster_AC_PSU.ctl"/>
+					<Item Name="SensorCluster.ctl" Type="VI" URL="../SensorCluster.ctl"/>
+					<Item Name="DataQueue.ctl" Type="VI" URL="../DataQueue.ctl"/>
+					<Item Name="SensorClusterHistory.ctl" Type="VI" URL="../SensorClusterHistory.ctl"/>
+				</Item>
 				<Item Name="RunTimeMenu.rtm" Type="Document" URL="../RunTimeMenu.rtm"/>
 				<Item Name="RunTimeMenu_Partition.rtm" Type="Document" URL="../RunTimeMenu_Partition.rtm"/>
 			</Item>
@@ -272,70 +277,70 @@
 				<Item Name="TCC.vi" Type="VI" URL="../TCC.vi"/>
 				<Item Name="TCE.vi" Type="VI" URL="../TCE.vi"/>
 			</Item>
-		</Item>
-		<Item Name="Test Functions" Type="Folder">
-			<Property Name="NI.SortType" Type="Int">3</Property>
-			<Item Name="ThermoCouple" Type="Folder">
-				<Item Name="ThermoCouple_DAQ.vi" Type="VI" URL="../ThermoCouple_DAQ.vi"/>
-				<Item Name="ThermoCouple_Datafile_Append.vi" Type="VI" URL="../ThermoCouple_Datafile_Append.vi"/>
-				<Item Name="ThermoCouple_Datafile_Create.vi" Type="VI" URL="../ThermoCouple_Datafile_Create.vi"/>
-				<Item Name="ThermoCouple_Packer.vi" Type="VI" URL="../ThermoCouple_Packer.vi"/>
-				<Item Name="ThermoCouple_Read.vi" Type="VI" URL="../ThermoCouple_Read.vi"/>
-				<Item Name="ProjectTemperatureChannel_0" Type="NI-DAQmx Channel">
-					<Property Name="AI.ADCTimingMode" Type="Str">High Speed</Property>
-					<Property Name="AI.AutoZeroMode" Type="Str">None</Property>
-					<Property Name="AI.Max" Type="Str">100</Property>
-					<Property Name="AI.MeasType" Type="Str">Temperature:Thermocouple</Property>
-					<Property Name="AI.Min" Type="Str">0</Property>
-					<Property Name="AI.Temp.Units" Type="Str">Deg C</Property>
-					<Property Name="AI.Thrmcpl.CJCChan" Type="Str"></Property>
-					<Property Name="AI.Thrmcpl.CJCSrc" Type="Str">Built-In</Property>
-					<Property Name="AI.Thrmcpl.CJCVal" Type="Str">25</Property>
-					<Property Name="AI.Thrmcpl.Type" Type="Str">J</Property>
-					<Property Name="ChanType" Type="Str">Analog Input</Property>
-					<Property Name="Descr" Type="Str"></Property>
-					<Property Name="Name" Type="Str">ProjectTemperatureChannel_0</Property>
-					<Property Name="PhysicalChanName" Type="Str">cDAQ2Mod1/ai0</Property>
+			<Item Name="Test Functions" Type="Folder">
+				<Property Name="NI.SortType" Type="Int">3</Property>
+				<Item Name="ThermoCouple" Type="Folder">
+					<Item Name="ThermoCouple_DAQ.vi" Type="VI" URL="../ThermoCouple_DAQ.vi"/>
+					<Item Name="ThermoCouple_Datafile_Append.vi" Type="VI" URL="../ThermoCouple_Datafile_Append.vi"/>
+					<Item Name="ThermoCouple_Datafile_Create.vi" Type="VI" URL="../ThermoCouple_Datafile_Create.vi"/>
+					<Item Name="ThermoCouple_Packer.vi" Type="VI" URL="../ThermoCouple_Packer.vi"/>
+					<Item Name="ThermoCouple_Read.vi" Type="VI" URL="../ThermoCouple_Read.vi"/>
+					<Item Name="ProjectTemperatureChannel_0" Type="NI-DAQmx Channel">
+						<Property Name="AI.ADCTimingMode" Type="Str">High Speed</Property>
+						<Property Name="AI.AutoZeroMode" Type="Str">None</Property>
+						<Property Name="AI.Max" Type="Str">100</Property>
+						<Property Name="AI.MeasType" Type="Str">Temperature:Thermocouple</Property>
+						<Property Name="AI.Min" Type="Str">0</Property>
+						<Property Name="AI.Temp.Units" Type="Str">Deg C</Property>
+						<Property Name="AI.Thrmcpl.CJCChan" Type="Str"></Property>
+						<Property Name="AI.Thrmcpl.CJCSrc" Type="Str">Built-In</Property>
+						<Property Name="AI.Thrmcpl.CJCVal" Type="Str">25</Property>
+						<Property Name="AI.Thrmcpl.Type" Type="Str">J</Property>
+						<Property Name="ChanType" Type="Str">Analog Input</Property>
+						<Property Name="Descr" Type="Str"></Property>
+						<Property Name="Name" Type="Str">ProjectTemperatureChannel_0</Property>
+						<Property Name="PhysicalChanName" Type="Str">cDAQ2Mod1/ai0</Property>
+					</Item>
+					<Item Name="ProjectTemperatureChannel_1" Type="NI-DAQmx Channel">
+						<Property Name="AI.ADCTimingMode" Type="Str">High Speed</Property>
+						<Property Name="AI.AutoZeroMode" Type="Str">Every Sample</Property>
+						<Property Name="AI.Max" Type="Str">100</Property>
+						<Property Name="AI.MeasType" Type="Str">Temperature:Thermocouple</Property>
+						<Property Name="AI.Min" Type="Str">0</Property>
+						<Property Name="AI.Temp.Units" Type="Str">Deg C</Property>
+						<Property Name="AI.Thrmcpl.CJCChan" Type="Str"></Property>
+						<Property Name="AI.Thrmcpl.CJCSrc" Type="Str">Built-In</Property>
+						<Property Name="AI.Thrmcpl.CJCVal" Type="Str">25</Property>
+						<Property Name="AI.Thrmcpl.Type" Type="Str">J</Property>
+						<Property Name="ChanType" Type="Str">Analog Input</Property>
+						<Property Name="Descr" Type="Str"></Property>
+						<Property Name="Name" Type="Str">ProjectTemperatureChannel_1</Property>
+						<Property Name="PhysicalChanName" Type="Str">cDAQ2Mod1/ai1</Property>
+					</Item>
+					<Item Name="ThermoCoupleSingle" Type="NI-DAQmx Channel">
+						<Property Name="AI.AutoZeroMode" Type="Str">Every Sample</Property>
+						<Property Name="AI.Max" Type="Str">100</Property>
+						<Property Name="AI.MeasType" Type="Str">Temperature:Thermocouple</Property>
+						<Property Name="AI.Min" Type="Str">0</Property>
+						<Property Name="AI.Temp.Units" Type="Str">Deg C</Property>
+						<Property Name="AI.Thrmcpl.CJCChan" Type="Str"></Property>
+						<Property Name="AI.Thrmcpl.CJCSrc" Type="Str">Built-In</Property>
+						<Property Name="AI.Thrmcpl.CJCVal" Type="Str">25</Property>
+						<Property Name="AI.Thrmcpl.Type" Type="Str">J</Property>
+						<Property Name="ChanType" Type="Str">Analog Input</Property>
+						<Property Name="Descr" Type="Str"></Property>
+						<Property Name="Name" Type="Str">ThermoCoupleSingle</Property>
+						<Property Name="PhysicalChanName" Type="Str">cDAQ2Mod1/ai0</Property>
+					</Item>
 				</Item>
-				<Item Name="ProjectTemperatureChannel_1" Type="NI-DAQmx Channel">
-					<Property Name="AI.ADCTimingMode" Type="Str">High Speed</Property>
-					<Property Name="AI.AutoZeroMode" Type="Str">Every Sample</Property>
-					<Property Name="AI.Max" Type="Str">100</Property>
-					<Property Name="AI.MeasType" Type="Str">Temperature:Thermocouple</Property>
-					<Property Name="AI.Min" Type="Str">0</Property>
-					<Property Name="AI.Temp.Units" Type="Str">Deg C</Property>
-					<Property Name="AI.Thrmcpl.CJCChan" Type="Str"></Property>
-					<Property Name="AI.Thrmcpl.CJCSrc" Type="Str">Built-In</Property>
-					<Property Name="AI.Thrmcpl.CJCVal" Type="Str">25</Property>
-					<Property Name="AI.Thrmcpl.Type" Type="Str">J</Property>
-					<Property Name="ChanType" Type="Str">Analog Input</Property>
-					<Property Name="Descr" Type="Str"></Property>
-					<Property Name="Name" Type="Str">ProjectTemperatureChannel_1</Property>
-					<Property Name="PhysicalChanName" Type="Str">cDAQ2Mod1/ai1</Property>
-				</Item>
-				<Item Name="ThermoCoupleSingle" Type="NI-DAQmx Channel">
-					<Property Name="AI.AutoZeroMode" Type="Str">Every Sample</Property>
-					<Property Name="AI.Max" Type="Str">100</Property>
-					<Property Name="AI.MeasType" Type="Str">Temperature:Thermocouple</Property>
-					<Property Name="AI.Min" Type="Str">0</Property>
-					<Property Name="AI.Temp.Units" Type="Str">Deg C</Property>
-					<Property Name="AI.Thrmcpl.CJCChan" Type="Str"></Property>
-					<Property Name="AI.Thrmcpl.CJCSrc" Type="Str">Built-In</Property>
-					<Property Name="AI.Thrmcpl.CJCVal" Type="Str">25</Property>
-					<Property Name="AI.Thrmcpl.Type" Type="Str">J</Property>
-					<Property Name="ChanType" Type="Str">Analog Input</Property>
-					<Property Name="Descr" Type="Str"></Property>
-					<Property Name="Name" Type="Str">ThermoCoupleSingle</Property>
-					<Property Name="PhysicalChanName" Type="Str">cDAQ2Mod1/ai0</Property>
-				</Item>
+				<Item Name="ThermoCouple_Logger.vi" Type="VI" URL="../ThermoCouple_Logger.vi"/>
+				<Item Name="Channel_Detect.vi" Type="VI" URL="../Channel_Detect.vi"/>
+				<Item Name="PSU_Command_Test.vi" Type="VI" URL="../PSU_Command_Test.vi"/>
+				<Item Name="Thermal_Camera_Stream.vi" Type="VI" URL="../Thermal_Camera_Stream.vi"/>
+				<Item Name="CameraAttributeTest.vi" Type="VI" URL="../CameraAttributeTest.vi"/>
+				<Item Name="CameraAttributeSearch.vi" Type="VI" URL="../CameraAttributeSearch.vi"/>
+				<Item Name="ThermalVideoStream.vi" Type="VI" URL="../ThermalVideoStream.vi"/>
 			</Item>
-			<Item Name="ThermoCouple_Logger.vi" Type="VI" URL="../ThermoCouple_Logger.vi"/>
-			<Item Name="Channel_Detect.vi" Type="VI" URL="../Channel_Detect.vi"/>
-			<Item Name="PSU_Command_Test.vi" Type="VI" URL="../PSU_Command_Test.vi"/>
-			<Item Name="Thermal_Camera_Stream.vi" Type="VI" URL="../Thermal_Camera_Stream.vi"/>
-			<Item Name="CameraAttributeTest.vi" Type="VI" URL="../CameraAttributeTest.vi"/>
-			<Item Name="CameraAttributeSearch.vi" Type="VI" URL="../CameraAttributeSearch.vi"/>
-			<Item Name="ThermalVideoStream.vi" Type="VI" URL="../ThermalVideoStream.vi"/>
 		</Item>
 		<Item Name="Assets" Type="Folder">
 			<Item Name="Logo.ico" Type="Document" URL="../resources/Logo.ico"/>
@@ -344,7 +349,6 @@
 			<Item Name="LogoClean.ico" Type="Document" URL="../resources/LogoClean.ico"/>
 		</Item>
 		<Item Name="main.vi" Type="VI" URL="../main.vi"/>
-		<Item Name="Options_CV.vi" Type="VI" URL="../Options_CV.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
@@ -626,8 +630,6 @@
 				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
 				<Item Name="VISA Find Search Mode.ctl" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Find Search Mode.ctl"/>
 				<Item Name="Beep.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/Beep.vi"/>
-				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
-				<Item Name="lvpidtkt.dll" Type="Document" URL="/&lt;vilib&gt;/addons/control/pid/lvpidtkt.dll"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_PtbyPt.lvlib" Type="Library" URL="/&lt;vilib&gt;/ptbypt/NI_PtbyPt.lvlib"/>
 				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
@@ -707,6 +709,10 @@
 				<Item Name="System Directory Type.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/System Directory Type.ctl"/>
 				<Item Name="Get System Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/Get System Directory.vi"/>
 				<Item Name="Particle Parameters" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Particle Parameters"/>
+				<Item Name="Close Panel.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/victl.llb/Close Panel.vi"/>
+				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
+				<Item Name="Open Panel.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/victl.llb/Open Panel.vi"/>
+				<Item Name="Get Instrument State.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/victl.llb/Get Instrument State.vi"/>
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
@@ -760,7 +766,8 @@
 				<Property Name="Bld_localDestDir" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/bin/Full Build</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{27D8B2BC-76A3-474D-8C11-FD95C8E7081D}</Property>
-				<Property Name="Bld_version.build" Type="Int">12</Property>
+				<Property Name="Bld_version.build" Type="Int">23</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.patch" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Biosim.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">/D/Projects/NI_AB_PROJECTNAME/Builds/bin/Full Build/Biosim.exe</Property>
@@ -772,7 +779,7 @@
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Assets/LogoClean.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{141C37E4-DA11-4FB3-93AB-84E534B5520E}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{65462775-0365-4988-B7E5-1404416E770B}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/main.vi</Property>
@@ -787,13 +794,7 @@
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Build files/camera_placeholder.png</Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Build files/Profiles</Property>
-				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[5].type" Type="Str">Container</Property>
-				<Property Name="SourceCount" Type="Int">6</Property>
+				<Property Name="SourceCount" Type="Int">5</Property>
 				<Property Name="TgtF_companyName" Type="Str">Aarhus University</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Software for controlling BioSIM (Bioaerosol Simulation Chamber)</Property>
 				<Property Name="TgtF_internalName" Type="Str">BioSIM</Property>
@@ -911,7 +912,7 @@
 				<Property Name="INST_includeError" Type="Bool">false</Property>
 				<Property Name="INST_installerName" Type="Str">install.exe</Property>
 				<Property Name="INST_productName" Type="Str">BioSIM</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.5</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.6</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">22308000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
@@ -991,7 +992,7 @@
 				<Property Name="INST_includeError" Type="Bool">false</Property>
 				<Property Name="INST_installerName" Type="Str">update.exe</Property>
 				<Property Name="INST_productName" Type="Str">BioSIM</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.5</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.6</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">22308000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
