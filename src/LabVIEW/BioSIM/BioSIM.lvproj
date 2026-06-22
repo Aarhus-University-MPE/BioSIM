@@ -546,7 +546,7 @@
 				<Item Name="IMAQ Convert ROI to Point" Type="VI" URL="/&lt;vilib&gt;/vision/ROI Conversion.llb/IMAQ Convert ROI to Point"/>
 				<Item Name="IMAQ Convert ROI to Rectangle" Type="VI" URL="/&lt;vilib&gt;/vision/ROI Conversion.llb/IMAQ Convert ROI to Rectangle"/>
 				<Item Name="IMAQ Create" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Create"/>
-				<Item Name="Imaq Dispose" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/Imaq Dispose"/>
+				<Item Name="IMAQ Dispose" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Dispose"/>
 				<Item Name="IMAQ Image.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Image.ctl"/>
 				<Item Name="IMAQ ImageToArray" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ ImageToArray"/>
 				<Item Name="IMAQ Overlay Multiple Lines 2" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay Multiple Lines 2"/>
@@ -772,18 +772,18 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{27D8B2BC-76A3-474D-8C11-FD95C8E7081D}</Property>
-				<Property Name="Bld_version.build" Type="Int">32</Property>
+				<Property Name="Bld_version.build" Type="Int">5</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Bld_version.patch" Type="Int">1</Property>
+				<Property Name="Bld_version.patch" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">Biosim.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/BioSIM/Biosim.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/BioSIM/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/BioSIM/Resources</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Assets/LogoClean.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{2D836FC9-C6B9-4A0B-94A1-A04CF63992E7}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{E7728AEE-2DE8-4BC8-A972-6836DB3D39CF}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/main.vi</Property>
@@ -904,16 +904,16 @@
 				<Property Name="INST_includeError" Type="Bool">false</Property>
 				<Property Name="INST_installerName" Type="Str">install.exe</Property>
 				<Property Name="INST_productName" Type="Str">BioSIM</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.10</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.17</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">24118001</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
-				<Property Name="MSI_arpContact" Type="Str">Mads Rosenhøj Jeppesen</Property>
-				<Property Name="MSI_arpPhone" Type="Str">+45 20 89 43 32</Property>
+				<Property Name="MSI_arpContact" Type="Str">Jeppe Fogh Rasmussen</Property>
+				<Property Name="MSI_arpPhone" Type="Str">+45 4239 6736</Property>
 				<Property Name="MSI_autoselectDrivers" Type="Bool">true</Property>
 				<Property Name="MSI_distID" Type="Str">{755E61CD-97BF-483B-B739-AB4A2FAC3198}</Property>
 				<Property Name="MSI_osCheck" Type="Int">0</Property>
-				<Property Name="MSI_upgradeCode" Type="Str">{5940FEEC-89CB-4DDF-8C4E-0C318B508615}</Property>
+				<Property Name="MSI_upgradeCode" Type="Str">{C5BCF960-1B13-4FB9-BB3A-B1C6A94C4125}</Property>
 				<Property Name="MSI_windowMessage" Type="Str">Install BioSIM Software</Property>
 				<Property Name="MSI_windowTitle" Type="Str">BioSIM Software Installer</Property>
 				<Property Name="RegDest[0].dirName" Type="Str">Software</Property>
@@ -985,7 +985,7 @@
 				<Property Name="INST_includeError" Type="Bool">false</Property>
 				<Property Name="INST_installerName" Type="Str">update.exe</Property>
 				<Property Name="INST_productName" Type="Str">BioSIM</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.10</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.14</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">24118001</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Aarhus University</Property>
