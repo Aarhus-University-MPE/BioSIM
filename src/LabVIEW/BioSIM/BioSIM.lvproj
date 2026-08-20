@@ -126,6 +126,7 @@
 				<Item Name="DAQ_Package.vi" Type="VI" URL="../DAQ_Package.vi"/>
 				<Item Name="WriteFile.vi" Type="VI" URL="../WriteFile.vi"/>
 				<Item Name="Image_Save.vi" Type="VI" URL="../Image_Save.vi"/>
+				<Item Name="Snapshot_file_and_folder.vi" Type="VI" URL="../Snapshot_file_and_folder.vi"/>
 			</Item>
 			<Item Name="PID" Type="Folder">
 				<Item Name="PID_Calculate.vi" Type="VI" URL="../PID_Calculate.vi"/>
