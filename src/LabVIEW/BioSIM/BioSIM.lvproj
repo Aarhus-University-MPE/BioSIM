@@ -353,6 +353,7 @@
 			<Item Name="LogoClean.ico" Type="Document" URL="../resources/LogoClean.ico"/>
 		</Item>
 		<Item Name="main.vi" Type="VI" URL="../main.vi"/>
+		<Item Name="Tag-t&apos;DataCluster.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-t&apos;DataCluster.ctl&apos;.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
@@ -750,7 +751,6 @@
 			<Item Name="Stream-bool.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Stream-bool.lvlib"/>
 			<Item Name="Tag-c(c(ref(LVObjVI()),bool),bool,bool,u32[Cool,Heat]).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(c(ref(LVObjVI()),bool),bool,bool,u32[Cool,Heat]).lvlib"/>
 			<Item Name="Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-c(bool,ref(UserDefinedRefnumTag),bool,path,bool).lvlib"/>
-			<Item Name="Tag-t&apos;DataCluster.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Tag-t&apos;DataCluster.ctl&apos;.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="BioSIM" Type="EXE">
